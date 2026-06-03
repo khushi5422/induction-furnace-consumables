@@ -140,17 +140,11 @@ export default function Footer() {
             <div>
                 <footer className={`${Home.white_link} p-2`}>
                     <div className="flex">
-                        <section className="flex-content">
-                            <Row>
-                                <Col><img src='../../logo.svg' alt='Loading..' className='image_logo' loading="lazy" /></Col>
-                                <Col><img src='../../logo.svg' alt='Loading..' className='image_logo' loading="lazy" /></Col>
-                            </Row>
-                            <Row>
-                                <Col><img src='../../logo.svg' alt='Loading..' className='image_logo' loading="lazy" /></Col>
-                                <Col><img src='../../logo.svg' alt='Loading..' className='image_logo' loading="lazy" /></Col>
-                            </Row>
-
-                            {/* <img src='../../logo.svg' alt='Loading..' className='image_logo' loading="lazy" /> */}
+                        <section className="flex-content p-1">
+                            <img src='../../logo.svg' alt='Loading..' className='image_logo' loading="lazy" />
+                            <p className="mt-2 text-white">KDS Internationals are a new edge od spice exporter who deliveres world best spice from heart of India.
+                            We at  having good associations with USA, Canada, Dubai, Saudi Arabia, Australia, Germany, UK, Russia and worldwide.
+                                </p>
                         </section>
                         <section className="flex-content p-1">
                             <h3 className='text-white'>Products</h3>
