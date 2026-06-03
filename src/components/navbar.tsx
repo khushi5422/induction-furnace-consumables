@@ -25,7 +25,7 @@ const Navigationbar = () => {
             <Nav.Link href="/" className="text-dark" >Home</Nav.Link>
             <Nav.Link href="/aboutus" className="text-dark">About</Nav.Link>
             {/* <Nav.Link href="/gallery" className="text-dark" >Gallery</Nav.Link> */}
-            <NavDropdown  className="text-dark" title="Products" id="collapsible-nav-dropdown">
+            <NavDropdown  title="Products" id="collapsible-nav-dropdown">
               <NavDropdown.Item href="/gallery">Induction Furnace Assembly</NavDropdown.Item>
               <NavDropdown.Item href="/gallery">
                 Another action

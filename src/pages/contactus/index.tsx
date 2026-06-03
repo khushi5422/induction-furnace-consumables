@@ -295,7 +295,7 @@ const ContactFooorm: React.FC = () => {
                   </div>
 
                   <div className={`row justify-content-between`}>
-                    <div className={`${Contact.boxtop}col-md-3`}>
+                    <div className={`${Contact.boxtop} col-md-3`}>
                       <div className={`${Contact.dbox}  w-100 text-center`}>
                         <div className={`${Contact.icon}d-flex align-items-center justify-content-center`}>
                           <img src='location.svg' alt="location" loading="lazy" />
@@ -307,7 +307,7 @@ const ContactFooorm: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                    <div className={`${Contact.boxtop}col-md-3`}>
+                    <div className={`${Contact.boxtop} col-md-3`}>
                       <div className={`${Contact.dbox} w-100 text-center`}>
                         <div className={`${Contact.icon}d-flex align-items-center justify-content-center`}>
                           <img src='call.svg' alt="Phone Number" loading="lazy"/>
@@ -320,7 +320,7 @@ const ContactFooorm: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                    <div className={`${Contact.boxtop}col-md-3`}>
+                    <div className={`${Contact.boxtop} col-md-3`}>
                       <div className={`${Contact.dbox} w-100 text-center`}>
                         <div className={`${Contact.icon}d-flex align-items-center justify-content-center`}>
                           <img src='whatsapp.svg' alt="WhatsApp" loading="lazy" />
@@ -332,7 +332,7 @@ const ContactFooorm: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                    <div className={`${Contact.boxtop}col-md-3`}>
+                    <div className={`${Contact.boxtop} col-md-3`}>
                       <div className={`${Contact.dbox} w-100 text-center`}>
                         <div className={`${Contact.icon}d-flex align-items-center justify-content-center`}>
                           <img src='mail.svg' alt="Mail Id" loading="lazy" />
