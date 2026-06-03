@@ -142,9 +142,10 @@ export default function Footer() {
                     <div className="flex">
                         <section className="flex-content p-1">
                             <img src='../../logo.svg' alt='Loading..' className='image_logo' loading="lazy" />
-                            <p className="mt-2 text-white">KDS Internationals are a new edge od spice exporter who deliveres world best spice from heart of India.
-                            We at  having good associations with USA, Canada, Dubai, Saudi Arabia, Australia, Germany, UK, Russia and worldwide.
-                                </p>
+                            <p className="mt-2 text-white">Fieldman Induction </p>
+                            <p className="mt-2 text-white">Fieldman Sensors </p>
+                            <p className="mt-2 text-white">Fieldman Control System </p>
+                            <p className="mt-2 text-white">Fieldman Food Stuff Groups </p>
                         </section>
                         <section className="flex-content p-1">
                             <h3 className='text-white'>Products</h3>

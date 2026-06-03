@@ -4,10 +4,26 @@
   background-color: #f5fafe;
   z-index: 1000;
 }
+
+/* Force dark text for Bootstrap nav items even when Navbar uses variant="dark" */
+.navbg a,
+.navbg .nav-link,
+.navbg .dropdown-item,
+.navbg .dropdown-toggle {
+  color: #000 !important;
+}
+
+.navbg .nav-link:hover,
+.navbg .dropdown-item:hover,
+.navbg .dropdown-toggle:hover {
+  color: #000 !important;
+}
+
 .navlogo {
-   width: 10%; /*Adjust the width as needed */
+  width: 10%; /*Adjust the width as needed */
   height: auto;
 }
+
 @media (max-width: 768px) {
   .navwid {
     width: 72%;
