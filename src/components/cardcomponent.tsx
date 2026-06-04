@@ -14,21 +14,21 @@ const cardData: CardItem[] = [
   {
     image: '/bearing.webp',
     title: 'Slide Gate Refractories',
-    enquiryLink: '/contact',
+    enquiryLink: '/contactus',
     viewLink: '/gallery',
   },
 
   {
     image: '/f1.jpg',
     title: 'Casting Powder',
-    enquiryLink: '/contact',
+    enquiryLink: '/contactus',
     viewLink: '/gallery',
   },
 
   {
     image: '/pedestal-bearing.jpg',
     title: 'Tundish Boards',
-    enquiryLink: '/contact',
+    enquiryLink: '/contactus',
     viewLink: '/gallery',
   },
 ];
