@@ -6,7 +6,81 @@ import Home from '@/styles/Home.module.css'
 const AboutUs = () => {
   return (
     <section id="about-us" className="mt-5 mb-5">
-      <Container>
+
+      <Container className={Home.aboutSection}>
+
+        <Row className={Home.aboutRow}>
+
+          {/* LEFT SIDE */}
+
+          <Col lg={6} md={12}>
+
+            <div className={Home.aboutImageWrapper}>
+
+              <img
+                src="/AboutCompany.jpeg"
+                alt="About Us"
+                className={Home.aboutImage}
+                loading="lazy"
+              />
+
+            </div>
+
+          </Col>
+
+          {/* RIGHT SIDE */}
+
+          <Col lg={6} md={12}>
+
+            <div className={Home.aboutContent}>
+
+              <span className={Home.aboutTag}>
+                ABOUT COMPANY
+              </span>
+
+              <h2 className={Home.aboutTitle}>
+                Delivering Advanced Industrial
+                Furnace Solutions Since 2014
+              </h2>
+
+              <p className={Home.aboutText}>
+
+                We initially started our journey around 11 years back as
+                <b> FIELDMAN CONTROL SYSTEM </b>
+                but after achieving successful growth we launched our
+                new venture
+                <b> Fieldman Induction </b>
+                in 2014.
+
+                <br /><br />
+
+                We are a proud manufacturer, supplier and exporter of
+                products like
+                <b>
+                  {' '}Induction Furnace Coil,
+                  Furnace Assembly,
+                  Refractory Top Cast & Bottom Cast,
+                  Hydraulic Power Pack,
+                  Heating Furnace Spares
+                </b>
+                and many more.
+
+                <br /><br />
+
+                Our products are widely used in
+                steel, petrochemical, glass,
+                aerospace and plastic industries.
+
+              </p>
+
+            </div>
+
+          </Col>
+
+        </Row>
+
+      </Container>
+      {/* <Container>
         <Row>
           <Col lg={6} md={12}>
             <h2 className={`${Home.about_title}`}>About Our Company </h2>
@@ -29,14 +103,13 @@ const AboutUs = () => {
                 We have fabricated these products using the best quality components so that we can easily serve to the high market demands.
                 These products find their usage and application in several industries including petrochemical, iron, steel, glass industries, plastic industries aerospace and many more places.
                 We are a very established firm and thus we have many successful ventures under us such <b>Fieldman Sensors Pvt. Ltd.</b>,
-                <b>Fieldman Sensors </b> & Instruments and many more and we  are associated with some of the highly reputed and leading brands which includes Autonics, FLUKE, Mitsubishi, Omron, Honeywell, Delta and the list goes on.
-                All our partners and clients are highly satisfied by our cost effective products as we offer them with customized products as per their specific requirements and make sure that all the demands are duly met.
-                Furthermore we always welcome our customers feedback and suggestions and response them accordingly.
+                <b>Fieldman Sensors </b> & Instruments and many more 
               </p>
             </div>
           </Col>
         </Row>
-      </Container>
+      </Container> */}
+
       <Container>
         <div className={`${about.around} row mt-5 `}>
           <div
@@ -61,6 +134,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
+
         <div className={`${about.around} row mt-5 `}>
           <div
             className={`${about.widd} p-2 col-6 `}
@@ -80,6 +154,7 @@ const AboutUs = () => {
             data-aos-once="true"
             style={{ backgroundImage: `url('Inverter.jpg')` }}></div>
         </div>
+
         <div className={`${about.around} row mt-5 `}>
           <div
             className={`${about.box} col-6 `}

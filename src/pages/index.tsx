@@ -27,9 +27,9 @@ export default function Home() {
       <NextJsCarousel />
       <AboutUs />
       {/* without name Image Carousal blank time - 18 sec  && slider is with name blank time 30 sec */}
-      <ImageCarousal />
       {/* <ThumbnailCarousel slides={SLIDES2} options={OPTIONS2} /> */}
       <Services />
+      <ImageCarousal />
       <SectionTab />
       <ProductsSection />
       <ImageGallery />
