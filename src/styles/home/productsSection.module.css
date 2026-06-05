@@ -1,0 +1,378 @@
+
+
+.productsHeading {
+  text-align: center;
+
+  max-width: 760px;
+
+  margin: 0 auto 60px;
+}
+
+.productTag {
+  display: inline-block;
+
+  color: #ff1400;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 16px;
+}
+
+.productsHeading h2 {
+  font-size: 46px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  color: #111827;
+
+  margin-bottom: 20px;
+}
+
+.productsHeading p {
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  color: #5f6873;
+}
+
+.subTitle {
+  display: inline-block;
+
+  color: #ff1400;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 15px;
+}
+
+.productCard {
+  background: white;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  text-decoration: none;
+
+  color: inherit;
+
+  transition: all 0.35s ease;
+
+  will-change: transform;
+  
+  border: 1px solid #f0f0f0;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+
+  position: relative;
+}
+
+/* LEFT PANEL */
+
+.leftPanel {
+  width: 280px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+
+  padding-right: 30px;
+
+  border-right: 1px solid #ececec;
+
+  position: relative;
+
+  z-index: 2;
+}
+.productCard:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(255, 20, 0, 0.25);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.14);
+}
+
+.productsSection {
+  width: 100%;
+
+  display: flex;
+
+  gap: 40px;
+
+  padding: 48px;
+
+  margin: 0 auto;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 16px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+
+  overflow: hidden;
+}
+
+.productsSection::before {
+  content: "";
+
+  position: absolute;
+
+  top: -63px;
+  right: 3px;
+
+  width: 300px;
+  height: 300px;
+
+  background: rgba(255, 20, 0, 0.04);
+
+  border-radius: 50%;
+
+  z-index: 0;
+}
+
+/* CATEGORY BUTTON */
+
+.categoryBtn {
+  border: 1px solid #e5e7eb;
+
+  background: #ffffff;
+
+  padding: 18px 22px;
+
+  border-radius: 12px;
+
+  text-align: left;
+
+  transition: all 0.3s ease;
+
+  cursor: pointer;
+}
+
+.categoryBtn h4 {
+  font-size: 17px;
+
+  font-weight: 700;
+
+  color: #111827;
+
+  margin-bottom: 6px;
+}
+
+.categoryBtn p {
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  color: #5f6873;
+
+  margin: 0;
+}
+
+/* ACTIVE BUTTON */
+
+.activeCategory {
+  background: #ff1400;
+
+  border-color: #ff1400;
+
+  box-shadow: 0 10px 24px rgba(255, 20, 0, 0.2);
+}
+
+.activeCategory h4,
+.activeCategory p {
+  color: #ffffff;
+}
+.productCard {
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  transition: all 0.35s ease;
+
+  text-decoration: none;
+
+  color: inherit;
+
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.viewAllWrapper {
+  margin-top: 40px;
+
+  text-align: center;
+}
+
+.viewAllBtn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  height: 52px;
+
+  padding: 0 32px;
+
+  background: #ff1400;
+
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 12px;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.viewAllBtn:hover {
+  background: #b90f00;
+
+  transform: translateY(-2px);
+}
+
+/* HOVER */
+
+.categoryBtn:hover {
+  transform: translateX(5px);
+}
+
+/* RIGHT PANEL */
+
+.rightPanel {
+  flex: 1;
+}
+
+/* PRODUCTS GRID */
+
+.productsGrid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 30px;
+}
+
+/* PRODUCT CARD */
+
+.productCard {
+  background: white;
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  text-decoration: none;
+
+  color: inherit;
+
+  transition: all 0.35s ease;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* CARD HOVER */
+
+.productCard:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* IMAGE */
+
+.imageWrapper {
+  overflow: hidden;
+
+  height: 240px;
+}
+
+.productImage {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+/* IMAGE ZOOM */
+
+.productCard:hover .productImage {
+  transform: scale(1.08);
+}
+
+/* CARD CONTENT */
+
+.cardContent {
+  padding: 22px;
+}
+
+.cardContent h3 {
+  font-size: 22px;
+
+  line-height: 1.4;
+
+  font-weight: 600;
+
+  color: #1a1a1a;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .productsSection {
+    flex-direction: column;
+
+    padding: 50px 20px;
+  }
+
+  .leftPanel {
+    width: 100%;
+
+    flex-direction: row;
+
+    overflow-x: auto;
+
+    padding-bottom: 10px;
+  }
+
+  .categoryBtn {
+    min-width: max-content;
+  }
+}
+
+@media (max-width: 600px) {
+  .productsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .imageWrapper {
+    height: 220px;
+  }
+
+  .cardContent h3 {
+    font-size: 20px;
+  }
+}

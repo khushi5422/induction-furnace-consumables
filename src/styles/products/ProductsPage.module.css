@@ -1,0 +1,61 @@
+.productsSection {
+  padding: 90px 0;
+
+  background: #f6f8fa;
+}
+
+.container {
+  width: min(1320px, calc(100% - 40px));
+
+  margin: 0 auto;
+}
+
+.layout {
+  display: grid;
+
+  grid-template-columns:
+    320px 1fr;
+
+  gap: 42px;
+}
+
+.content {
+  min-width: 0;
+}
+
+.headingRow {
+  margin-bottom: 34px;
+}
+
+.headingRow span {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: #b90f00;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+}
+
+.headingRow h2 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: clamp(32px, 4vw, 48px);
+
+  line-height: 1.15;
+
+  font-weight: 850;
+}
+
+@media (max-width: 991px) {
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

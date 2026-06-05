@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Layout from "@/components/layout";
 import { useEffect } from "react";
 

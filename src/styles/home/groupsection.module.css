@@ -1,0 +1,186 @@
+.groupSection {
+  padding: 80px 0;
+}
+
+.groupHeading {
+  max-width: 760px;
+  margin-bottom: 42px;
+}
+
+.groupHeading span {
+  display: inline-block;
+  margin-bottom: 14px;
+
+  color: #b90f00;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+.groupHeading h2 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: clamp(36px, 5vw, 64px);
+
+  line-height: 1.08;
+
+  font-weight: 850;
+
+  letter-spacing: -1.8px;
+}
+
+.companyGrid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 28px;
+}
+
+.companyCard {
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  border: 1px solid #e7edf3;
+
+  box-shadow: 0 18px 48px rgba(15, 23, 42, 0.06);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+
+  will-change: transform;
+}
+
+.companyCard:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(185, 15, 0, 0.2);
+
+  box-shadow: 0 28px 70px rgba(15, 23, 42, 0.12);
+}
+
+.companyImageWrap {
+  position: relative;
+
+  height: 290px;
+
+  overflow: hidden;
+
+  background: #eef2f6;
+}
+
+.companyImage {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.45s ease;
+}
+
+.companyCard:hover .companyImage {
+  transform: scale(1.06);
+}
+
+.companyContent {
+  padding: 28px;
+}
+
+.companyContent span {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: #b90f00;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.companyContent h3 {
+  margin: 0 0 14px;
+
+  color: #111827;
+
+  font-size: 20px;
+
+  line-height: 1.3;
+
+  font-weight: 800;
+}
+
+.companyContent p {
+  margin: 0;
+
+  color: #5f6873;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  font-weight: 500;
+}
+
+@media (max-width: 1199px) {
+  .companyGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .groupSection {
+    padding: 52px 0;
+  }
+
+  .groupHeading {
+    margin-bottom: 30px;
+  }
+
+  .groupHeading h2 {
+    font-size: 38px;
+
+    line-height: 1.15;
+  }
+
+  .companyGrid {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .companyImageWrap {
+    height: 240px;
+  }
+
+  .companyContent {
+    padding: 22px;
+  }
+
+  .companyContent h3 {
+    font-size: 18px;
+  }
+
+  .companyContent p {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+}

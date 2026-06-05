@@ -1,53 +1,8 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
-import Home from '@/styles/Home.module.css'
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
-const productOrganizations = [
-  {
-    name: "Fieldman Induction",
-    description: "Induction furnace, heating systems and furnace spares.",
-    groups: [
-      {
-        title: "Induction Furnace",
-        items: ["Furnace Assembly", "Furnace Coil", "Water Cooled Cable"],
-      },
-      {
-        title: "Heating Spares",
-        items: ["Heating Furnace Spares", "Lead Adaptors", "Selector Switch"],
-      },
-    ],
-  },
-  {
-    name: "Fieldman Sensors",
-    description: "Temperature, pressure and industrial sensing products.",
-    groups: [
-      {
-        title: "Temperature Sensors",
-        items: ["Thermocouple Wire", "Temperature Gauge", "Heater"],
-      },
-      {
-        title: "Industrial Controls",
-        items: ["Pressure Gauge", "Controllers", "Automation Products"],
-      },
-    ],
-  },
-  {
-    name: "Fieldman Control System",
-    description: "Automation, instruments and factory control solutions.",
-    groups: [
-      {
-        title: "Automation",
-        items: ["Inverter", "Rotary Encoder", "Proximity Sensor"],
-      },
-      {
-        title: "Industrial Materials",
-        items: ["FRP Washers", "Teflon Sheet", "Mica Washer"],
-      },
-    ],
-  },
-];
+import Home from '@/styles/navbar.module.css'
+import { productOrganizations } from "@/data/productsData";
 
 const Navigationbar = () => {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
@@ -117,7 +72,7 @@ const Navigationbar = () => {
                       sensors, automation and industrial materials.
                     </p>
                     <Link
-                      href="/gallery"
+                      href="/products"
                       className={Home.megaCta}
                       onClick={closeProductsMenu}
                     >
@@ -127,19 +82,41 @@ const Navigationbar = () => {
 
                   <div className={Home.megaGrid}>
                     {productOrganizations.map((organization, orgIndex) => (
-                      <div className={Home.megaColumn} key={organization.name}>
+
+                      <div
+                        className={Home.megaColumn}
+                        key={organization.slug}
+                      >
+
                         <div className={Home.organizationHeader}>
-                          <span>{String(orgIndex + 1).padStart(2, "0")}</span>
+
+                          <span>
+                            {String(orgIndex + 1).padStart(2, "0")}
+                          </span>
+
                           <div>
-                            <h4>{organization.name}</h4>
-                            <p>{organization.description}</p>
+
+                            <h4>
+                              {organization.organization}
+                            </h4>
+
+                            <p>
+                              {organization.description}
+                            </p>
+
                           </div>
+
                         </div>
 
                         {organization.groups.map((group) => (
-                          <div className={Home.productGroup} key={group.title}>
+
+                          <div
+                            className={Home.productGroup}
+                            key={group.slug}
+                          >
+
                             <Link
-                              href="/gallery"
+                              href="/products"
                               className={Home.productMainLink}
                               onClick={closeProductsMenu}
                             >
@@ -147,23 +124,43 @@ const Navigationbar = () => {
                             </Link>
 
                             <div className={Home.subProductList}>
-                              {group.items.map((item) => (
+
+                              {group.products.slice(0, 3).map((product) => (
+
                                 <Link
-                                  href="/gallery"
-                                  key={item}
+                                  href={`/products/${product.slug}`}
+                                  key={product.slug}
                                   onClick={closeProductsMenu}
                                 >
-                                  {item}
+                                  {product.name}
                                 </Link>
+
                               ))}
+
                             </div>
+
+                            <Link
+                              href={`/products/category/${group.slug}`}
+                              className={Home.viewAllProducts}
+                              onClick={closeProductsMenu}
+                            >
+                              View All →
+                            </Link>
+
                           </div>
+
                         ))}
+
                       </div>
+
                     ))}
                   </div>
                 </div>
               </NavDropdown>
+
+              <Nav.Link href="/industries" className={Home.navLink}>
+                Industries We Serve
+              </Nav.Link>
 
               <Nav.Link href="/contactus" className={Home.navLink}>
                 Contact

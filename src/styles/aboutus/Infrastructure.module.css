@@ -1,0 +1,73 @@
+/* Infrastructure  */
+
+.infraSection {
+  padding: 90px 20px;
+
+  background: #f6f8fa;
+}
+
+.grid {
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+.content span {
+  color: #b90f00;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.content h2 {
+  margin: 20px 0;
+
+  color: #111827;
+
+  font-size: clamp(34px, 5vw, 52px);
+
+  line-height: 1.15;
+
+  font-weight: 800;
+}
+
+.content p {
+  color: #5f6873;
+
+  line-height: 1.9;
+
+  margin-bottom: 18px;
+}
+
+.imageWrap {
+  position: relative;
+
+  min-height: 500px;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+@media (max-width: 992px) {
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+

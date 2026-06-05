@@ -1,0 +1,111 @@
+.divisionsSection {
+  padding: 86px 0;
+  background: #f6f8fa;
+}
+
+.sectionHeader {
+  max-width: 720px;
+  margin-bottom: 34px;
+}
+
+.sectionHeader span {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #b90f00;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  color: #111827;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.15;
+  font-weight: 850;
+}
+
+.divisionsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.divisionCard {
+  overflow: hidden;
+  border: 1px solid #e8edf2;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 16px 42px rgba(15, 23, 42, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.divisionCard:hover {
+  transform: translateY(-6px);
+  border-color: rgba(185, 15, a0, 0.24);
+  box-shadow: 0 26px 60px rgba(15, 23, 42, 0.13);
+}
+
+.divisionImageWrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #111827;
+}
+
+.divisionImageWrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(17, 24, 39, 0.02), rgba(17, 24, 39, 0.24));
+}
+
+.divisionImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.divisionCard:hover .divisionImage {
+  transform: scale(1.05);
+}
+
+.divisionContent {
+  padding: 22px;
+}
+
+.divisionContent h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 19px;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.divisionContent p {
+  margin: 12px 0 0;
+  color: #5f6873;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+@media (max-width: 1199px) {
+  .divisionsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .divisionsSection {
+    padding: 64px 0;
+  }
+
+  .divisionsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .divisionContent {
+    padding: 20px;
+  }
+}

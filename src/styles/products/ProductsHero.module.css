@@ -1,0 +1,75 @@
+.hero {
+  position: relative;
+
+  min-height: 55vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  background-image:
+    url('/testimonial-bg.jpg');
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(17,24,39,0.9),
+      rgba(17,24,39,0.78)
+    );
+}
+
+.content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 900px;
+
+  padding: 0 20px;
+}
+
+.content span {
+  color: #ff1400;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.content h1 {
+  margin: 24px 0;
+
+  color: white;
+
+  font-size: clamp(42px, 6vw, 78px);
+
+  line-height: 1.08;
+
+  font-weight: 850;
+}
+
+.content p {
+  color: rgba(255,255,255,0.78);
+
+  font-size: 18px;
+
+  line-height: 1.8;
+}

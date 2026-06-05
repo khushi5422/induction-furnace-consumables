@@ -1,0 +1,185 @@
+.hero {
+  position: relative;
+
+  height: 48vh;
+
+  min-height: 420px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  background-image:
+    url('/testimonial-bg.jpg');
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(17,24,39,0.86),
+      rgba(17,24,39,0.72)
+    );
+}
+
+.content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 820px;
+
+  padding: 0 20px;
+}
+
+.content span {
+  color: #ff1400;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.content h1 {
+  margin: 22px 0;
+
+  color: white;
+
+  font-size: clamp(42px, 6vw, 72px);
+
+  line-height: 1.08;
+
+  font-weight: 850;
+}
+
+.content p {
+  color: rgba(255,255,255,0.78);
+
+  font-size: 18px;
+
+  line-height: 1.8;
+}
+
+/* FAQAccordion  */
+
+.section {
+  padding: 90px 20px;
+
+  background: #f6f8fa;
+}
+
+.heading {
+  text-align: center;
+
+  margin-bottom: 56px;
+}
+
+.heading span {
+  color: #b90f00;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.heading h2 {
+  margin-top: 18px;
+
+  color: #111827;
+
+  font-size: clamp(34px, 5vw, 52px);
+
+  font-weight: 850;
+}
+
+.accordion {
+  max-width: 980px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.item {
+  overflow: hidden;
+
+  border: 1px solid #e8edf2;
+
+  border-radius: 18px;
+
+  background: white;
+
+  box-shadow:
+    0 14px 40px rgba(15,23,42,0.05);
+}
+
+.question {
+  width: 100%;
+
+  padding: 26px 28px;
+
+  border: none;
+
+  background: transparent;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  color: #111827;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  text-align: left;
+}
+
+.answer {
+  max-height: 0;
+
+  overflow: hidden;
+
+  transition: 0.35s ease;
+}
+
+.answer.open {
+  max-height: 300px;
+}
+
+.answer p {
+  padding:
+    0 28px 28px;
+
+  margin: 0;
+
+  color: #5f6873;
+
+  line-height: 1.9;
+}
