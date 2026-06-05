@@ -12,7 +12,7 @@ export default function CTASection() {
       <div className={styles.content}>
 
         <span>
-          LET'S BUILD TOGETHER
+          LET`&apos;`S BUILD TOGETHER
         </span>
 
         <h2>
