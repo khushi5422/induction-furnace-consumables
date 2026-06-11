@@ -46,9 +46,9 @@ export default function Owner() {
         <br /><br />
 
         Today, Fieldman Induction proudly serves
-        petrochemical, steel, aerospace, glass and
+        Iron & Steel and Casting Industries 
         manufacturing industries with precision-engineered
-        furnace systems and industrial components.
+        furnace systems and induction furnace components.
 
         <br /><br />
 

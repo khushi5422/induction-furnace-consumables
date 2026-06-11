@@ -7,23 +7,23 @@ import Product from '@/styles/home/productsSection.module.css';
 
 const productCategories = [
     {
-        category: 'Steel Products',
+        category: 'Induction Furnace Assembly',
         description:
-            'Advanced refractory and casting solutions for steel industries.',
+            'We Manufacture Induction Melting Furnace Assembly.',
 
         products: [
             {
-                name: 'Slide Gate Refractories',
-                image: '/valves.jpg',
-                link: '/products',
+                name: 'Steel Melting Furnace Assembly',
+                image: '/steel-melting-furnace-assembly.png',
+                link: '/products/steel-melting-furnace-assembly',
             },
             {
-                name: 'Tundish Boards',
+                name: 'Induction Furnace Coil',
                 image: '/Inverter-Scr.jpg',
                 link: '/products',
             },
             {
-                name: 'Casting Powder',
+                name: 'Top Bottom Spares',
                 image: '/pedestal-bearing.jpg',
                 link: '/products',
             }
@@ -31,20 +31,20 @@ const productCategories = [
     },
 
     {
-        category: 'Foundry Equipments',
+        category: 'Measuring Instruments',
 
         products: [
             {
-                name: 'Tundish Boards',
+                name: 'Temperature Tips , Lollypop Sampler & Thermocouple',
                 image: '/Inverter-Scr.jpg',
                 link: '/products',
             },
             {
-                name: 'Slide Gate Refractories',
+                name: 'Measuring Instruments',
                 image: '/valves.jpg',
                 link: '/products',
             },{
-                name: 'Casting Powder',
+                name: 'Powder Refractories Manufacturer',
                 image: '/pedestal-bearing.jpg',
                 link: '/products',
             }
@@ -53,21 +53,31 @@ const productCategories = [
     },
 
     {
-        category: 'Induction Systems',
+        category: 'Automation Instruments',
 
         products: [
             {
-                name: 'Tundish Boards',
+                name: 'Fluke',
                 image: '/Inverter-Scr.jpg',
                 link: '/products',
             },
             {
-                name: 'Slide Gate Refractories',
+                name: 'Kyrotisu',
                 image: '/valves.jpg',
                 link: '/products',
             },
             {
-                name: 'Slide Gate Refractories',
+                name: 'Extech',
+                image: '/pedestal-bearing.jpg',
+                link: '/products',
+            },
+            {
+                name: 'Metravi',
+                image: '/pedestal-bearing.jpg',
+                link: '/products',
+            },
+            {
+                name: 'Testo',
                 image: '/pedestal-bearing.jpg',
                 link: '/products',
             }

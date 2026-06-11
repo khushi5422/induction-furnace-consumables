@@ -31,18 +31,18 @@ export default function Footer() {
             className={styles.footerLogo}
           />
 
-          <p className={styles.footerDescription}>
+          {/* <p className={styles.footerDescription}>
             Delivering advanced induction furnace
             systems and industrial engineering solutions
             trusted by manufacturing industries globally.
-          </p>
+          </p> */}
 
           <div className={styles.companyList}>
 
             <span>Fieldman Induction</span>
-            <span>Fieldman Sensors</span>
+            <span>Fieldman Sensors Pvt Ltd</span>
             <span>Fieldman Control System</span>
-            <span>Fieldman Food Stuff Groups</span>
+            <span>Food Stuff </span>
 
           </div>
 
@@ -55,9 +55,8 @@ export default function Footer() {
           <h3>Products</h3>
 
           <div className={styles.footerLinks}>
-
             <Link href="/products">
-              Automation & Instruments
+              Export House
             </Link>
 
             <Link href="/products">
@@ -65,16 +64,21 @@ export default function Footer() {
             </Link>
 
             <Link href="/products">
-              Rolling Mill Equipment
+              Meauring Instruments Temperature Tips 
             </Link>
-
             <Link href="/products">
               Refractory Manufacturing
             </Link>
 
             <Link href="/products">
-              Export House
+              Rolling Mill Equipment
             </Link>
+
+            <Link href="/products">
+              Automation & Instruments
+            </Link>
+
+
 
           </div>
 

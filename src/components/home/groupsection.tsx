@@ -6,23 +6,23 @@ const groupCompanies = [
   {
     label: "AUTOMATION & CONTROLS",
     title: "Fieldman Control System",
-    image: "/valves.jpg",
+    image: "/fieldman-control-system.png",
     text:
       "A trusted division for industrial automation, factory automation, testing instruments, sensors and control products used across modern plant operations.",
   },
   {
     label: "SENSORS & MEASUREMENT",
     title: "Fieldman Sensors Pvt. Ltd.",
-    image: "/Inverter.jpg",
+    image: "/fieldman-sensor.png",
     text:
       "An Indian manufacturer of standard and precision temperature measurement sensors serving steel, glass, petrochemical, power and furnace industries.",
   },
   {
     label: "FURNACE SOLUTIONS",
     title: "Fieldman Induction",
-    image: "/pedestal-bearing.jpg",
+    image: "/fieldman-induction.png",
     text:
-      "Focused on induction furnace systems, selector switches, spares and allied products tested through a dedicated quality control process.",
+      "Focused on induction furnace, coil , refractories blocks , selector switches & all spares products tested through a dedicated quality control process.",
   },
 ];
 
@@ -32,7 +32,7 @@ const GroupSection = () => {
 
       <Container className={Home.groupSection}>
         <div className={Home.groupHeading}>
-          <span>FIELDMAN GROUP</span>
+          <span>FIELDMAN GROUP OF COMPANIES </span>
           <h2>Three focused organizations, one industrial standard.</h2>
         </div>
 

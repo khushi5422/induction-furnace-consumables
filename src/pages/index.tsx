@@ -20,12 +20,14 @@ export default function Home() {
       </Head>
       <Homecarousel />
       <AboutUs />
-      <GroupSection />
-      <STRENGTH />
-      <ProductImageCarousel />
+      <GroupSection /> 
+      {/* <STRENGTH />  */}
+      {/* Global Clients  */}
+      <ProductImageCarousel /> 
+      {/* Images CHnage  */}
       <SectionTab />
       <ProductsSection />
-      <DIVISIONS />
+      {/* <DIVISIONS /> */}
       <Owner />
     </>);
 }

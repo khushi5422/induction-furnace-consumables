@@ -6,29 +6,31 @@ import Home from '@/styles/home/homecarousel.module.css'
 const Homecarousel = () => {
   const images = [
     {
+      src: "Banner 4.jpg",
+      heading: "Manufacturer of Induction Furnace Spares & Exporter ",
+      description:
+        "A complete product range across Fieldman Induction, Fieldman Sensors and Fieldman Control System.",
+    }
+    ,
+    {
       src: "Banner 1.jpg",
-      heading: "Induction Furnace Coil",
+      heading: "Induction Melting Furnace & Coil Manufacturer",
       description:
         "Precision-built furnace coils, assemblies and industrial spares for demanding steel and foundry applications.",
     },
     {
       src: "Banner 2.jpg",
-      heading: "Induction Furnace Assembly",
+      heading: "Induction Furnace Assembly Manufacturer",
       description:
         "Reliable furnace assemblies engineered for efficient melting, heating and long-term plant performance.",
     },
     {
       src: "Banner 3.jpg",
-      heading: "Refractory Top Cast & Bottom Cast",
+      heading: "Refractory Top Cast & Bottom Cast Manufacturer",
       description:
         "Manufacturing and export support for refractory components, furnace spares and allied industrial products.",
     },
-    {
-      src: "Banner 4.jpg",
-      heading: "Industrial Furnace Spares",
-      description:
-        "A complete product range across Fieldman Induction, Fieldman Sensors and Fieldman Control System.",
-    }
+    
   ];
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const handleImageChange = (index: React.SetStateAction<number>) => {

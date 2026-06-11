@@ -3,11 +3,12 @@
 import styles from "@/styles/home/productimagecarousel.module.css";
 
 const images = [
-  '/Inverter-Scr.jpg',
-  '/pedestal-bearing.jpg',
-  '/Inverter.jpg',
+  '/steel-furnace-coil.png',
+  '/refractory-top-cast-ring-set.png',
+  '/fieldman-sensor.png',
   '/frp-washers.jpg',
-  '/AboutCompany.jpeg',
+  '/furnace-top-cast.png',
+  '/small-furnace-coil.png',
 ];
 
 export default function ProductImageCarousel() {
@@ -21,12 +22,11 @@ export default function ProductImageCarousel() {
       <div className={styles.headingWrapper}>
 
         <span className={styles.tag}>
-          OUR WORK
+          OUR MANUFACTURING
         </span>
 
         <h2>
-          Industrial Components &
-          Manufacturing Excellence
+          Steel Industry Machinary & Spares Manufacturer
         </h2>
 
         <p>

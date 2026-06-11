@@ -5,30 +5,25 @@ import styles from '@/styles/aboutus/About.module.css';
 
 const timeline = [
   {
-    year: '2014',
-    title: 'Foundation Of Fieldman Induction',
+    year: '2005',
+    title: 'Foundation Of FIELDMAN INDUCTION',
     desc: 'Started as a trusted manufacturer and supplier of induction furnace systems.',
   },
   {
-    year: '2016',
-    title: 'Expansion Into Automation',
+    year: '2007',
+    title: 'Expansion Into FIELDMAN CONTROL SYSTEM',
     desc: 'Expanded operations into industrial automation and engineering solutions.',
   },
   {
-    year: '2019',
-    title: 'Advanced Manufacturing',
-    desc: 'Built advanced infrastructure for industrial manufacturing capabilities.',
+    year: '2010',
+    title: 'Advanced Expansion to FIELDMAN SENSORS PRIVATE LIMITED',
+    desc: 'Built advanced infrastructure for industrial measuring instruments.',
   },
   {
-    year: '2022',
-    title: 'Global Export Presence',
+    year: '2024',
+    title: 'Global Export Presence With Food Stuff',
     desc: 'Expanded product supply and export operations across international markets.',
-  },
-  {
-    year: '2025',
-    title: 'Multi-Industry Engineering Group',
-    desc: 'Serving industries with furnace systems, sensors and industrial engineering.',
-  },
+  }
 ];
 
 export default function CompanyStory() {

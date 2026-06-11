@@ -5,17 +5,17 @@ import styles from '@/styles/aboutus/About.module.css';
 
 const stats = [
   {
-    number: 11,
+    number: 21,
     suffix: '+',
     title: 'Years Experience',
   },
   {
-    number: 500,
+    number: 1000,
     suffix: '+',
     title: 'Industrial Clients',
   },
   {
-    number: 20,
+    number: 50,
     suffix: '+',
     title: 'Product Categories',
   },

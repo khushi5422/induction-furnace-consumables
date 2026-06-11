@@ -46,6 +46,15 @@ const tabData = [
     buttonText: 'Explore Heating Solutions',
     buttonLink: '/products',
   },
+  {
+    label: 'Rolling Mill',
+    icon: <PrecisionManufacturingIcon />,
+    image: '/Banner 3.jpg',
+    title:
+      'High-performance induction heating systems for efficient industrial applications.',
+    buttonText: 'Explore Heating Solutions',
+    buttonLink: '/products',
+  },
 ];
 
 export default function SectionTabs() {

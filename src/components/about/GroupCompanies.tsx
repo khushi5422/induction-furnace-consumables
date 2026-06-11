@@ -2,19 +2,19 @@ import styles from '@/styles/aboutus/GroupCompanies.module.css';
 
 const companies = [
   {
-    image: '/heater.jpg',
+    image: '/fieldman-induction.png',
     title: 'Fieldman Induction',
-    desc: 'Advanced induction furnace systems and engineering solutions.',
+    desc: 'Fieldman Induction has emerged as a distinguished name in the realm of manufacturing, specializing in high-quality induction furnace spares. Having a large manufacturing facility with, high-end machinery, and a well-designed infrastructure our organization is well-equipped for efficient production.',
   },
   {
-    image: '/valves.jpg',
+    image: '/fieldman-sensor.png',
     title: 'Fieldman Sensors',
-    desc: 'Industrial automation and smart sensing technologies.',
+    desc: 'FSPL proudly stands as a Star Rated Export House, specializing  temperature Tips, Carbon cups & supply of top-quality spares for Induction Melting, Heating Furnaces, and Rolling Mills. We excel in trading high-quality Handling Equipment.',
   },
   {
-    image: '/Inverter.jpg',
+    image: '/fieldman-control-system.png',
     title: 'Fieldman Control System',
-    desc: 'Reliable industrial automation and control systems.',
+    desc: 'Your Ultimate Destination for a diverse array of measuring instruments & factory automation products. As a multi-brand super sourcing house , we take pride in being one-stop solution for cutting-edge technology & Innovation from top-notch brands across the globe.',
   },
 ];
 

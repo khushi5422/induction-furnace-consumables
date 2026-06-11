@@ -68,8 +68,8 @@ const Navigationbar = () => {
                     <span className={Home.megaEyebrow}>PRODUCT RANGE</span>
                     <h3>Explore by organization</h3>
                     <p>
-                      Browse our major product lines across induction,
-                      sensors, automation and industrial materials.
+                      Browse our major product lines across induction, sensors, automation and
+                      industrial materials.
                     </p>
                     <Link
                       href="/products"
@@ -82,63 +82,45 @@ const Navigationbar = () => {
 
                   <div className={Home.megaGrid}>
                     {productOrganizations.map((organization, orgIndex) => (
-
-                      <div
-                        className={Home.megaColumn}
-                        key={organization.slug}
-                      >
-
+                      <div className={Home.megaColumn} key={organization.slug}>
+                        {/* ORGANIZATION HEADER */}
                         <div className={Home.organizationHeader}>
-
-                          <span>
-                            {String(orgIndex + 1).padStart(2, "0")}
-                          </span>
-
+                          {/* <span>{String(orgIndex + 1).padStart(2, "0")}</span> */}
                           <div>
-
-                            <h4>
-                              {organization.organization}
-                            </h4>
-
-                            <p>
-                              {organization.description}
-                            </p>
-
+                            <h4>{organization.organization}</h4>
+                            {/* <p>{organization.description}</p> */}
                           </div>
-
                         </div>
 
-                        {organization.groups.map((group) => (
-
-                          <div
-                            className={Home.productGroup}
-                            key={group.slug}
-                          >
-
+                        {/* CATEGORY + PRODUCTS */}
+                        {/* CHANGES MADE HERE: Added .slice(0, 3) to limit main categories to 3 */}
+                        {organization.groups.slice(0, 3).map((group) => (
+                          <div className={Home.productGroup} key={group.slug}>
+                            {/* CATEGORY TITLE */}
                             <Link
-                              href="/products"
+                              href={`/products/category/${group.slug}`}
                               className={Home.productMainLink}
                               onClick={closeProductsMenu}
                             >
                               {group.title}
                             </Link>
 
+                            {/* PRODUCT NAMES */}
                             <div className={Home.subProductList}>
-
-                              {group.products.slice(0, 3).map((product) => (
-
+                              {group.products.slice(0, 2).map((product) => (
                                 <Link
                                   href={`/products/${product.slug}`}
                                   key={product.slug}
+                                  className={Home.productItem}
                                   onClick={closeProductsMenu}
                                 >
+                                  <span className={Home.productDot}></span>
                                   {product.name}
                                 </Link>
-
                               ))}
-
                             </div>
 
+                            {/* VIEW ALL */}
                             <Link
                               href={`/products/category/${group.slug}`}
                               className={Home.viewAllProducts}
@@ -146,21 +128,17 @@ const Navigationbar = () => {
                             >
                               View All →
                             </Link>
-
                           </div>
-
                         ))}
-
                       </div>
-
                     ))}
                   </div>
                 </div>
               </NavDropdown>
 
-              <Nav.Link href="/industries" className={Home.navLink}>
+              {/* <Nav.Link href="/industries" className={Home.navLink}>
                 Industries We Serve
-              </Nav.Link>
+              </Nav.Link> */}
 
               <Nav.Link href="/contactus" className={Home.navLink}>
                 Contact

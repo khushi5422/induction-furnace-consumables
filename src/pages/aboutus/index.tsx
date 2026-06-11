@@ -38,7 +38,7 @@ export default function AboutUs() {
 
         <WhyChooseUs />
 
-       <Infrastructure />
+       {/* <Infrastructure /> */}
 
         <Leadership />
 

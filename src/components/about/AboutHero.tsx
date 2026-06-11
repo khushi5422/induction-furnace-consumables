@@ -9,12 +9,12 @@ export default function AboutHero() {
       <div className={styles.heroContent}>
 
         <span>
-          ABOUT FIELDMAN GROUP
+          ABOUT FIELDMAN GROUP OF COMPANIES
         </span>
 
         <h1>
           Engineering Industrial
-          Innovation Since 2014
+          Innovation Since 2005
         </h1>
 
         <p>

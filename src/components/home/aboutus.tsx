@@ -2,29 +2,29 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Home from '@/styles/home/aboutus.module.css'
 
-const groupCompanies = [
-  {
-    label: "AUTOMATION & CONTROLS",
-    title: "Fieldman Control System",
-    image: "/valves.jpg",
-    text:
-      "A trusted division for industrial automation, factory automation, testing instruments, sensors and control products used across modern plant operations.",
-  },
-  {
-    label: "SENSORS & MEASUREMENT",
-    title: "Fieldman Sensors Pvt. Ltd.",
-    image: "/Inverter.jpg",
-    text:
-      "An Indian manufacturer of standard and precision temperature measurement sensors serving steel, glass, petrochemical, power and furnace industries.",
-  },
-  {
-    label: "FURNACE SOLUTIONS",
-    title: "Fieldman Induction",
-    image: "/pedestal-bearing.jpg",
-    text:
-      "Focused on induction furnace systems, selector switches, spares and allied products tested through a dedicated quality control process.",
-  },
-];
+// const groupCompanies = [
+//   {
+//     label: "AUTOMATION & CONTROLS",
+//     title: "Fieldman Control System",
+//     image: "/fieldman-control-system.png",
+//     text:
+//       "A trusted division for industrial automation, factory automation, testing instruments, sensors and control products used across modern plant operations.",
+//   },
+//   {
+//     label: "SENSORS & MEASUREMENT",
+//     title: "Fieldman Sensors Pvt. Ltd.",
+//     image: "/fieldman-sensor.png",
+//     text:
+//       "An Indian manufacturer of standard and precision temperature measurement sensors serving steel, glass, petrochemical, power and furnace industries.",
+//   },
+//   {
+//     label: "FURNACE SOLUTIONS",
+//     title: "Fieldman Induction",
+//     image: "/fieldman-induction.png",
+//     text:
+//       "Focused on induction furnace systems, selector switches, spares and allied products tested through a dedicated quality control process.",
+//   },
+// ];
 
 const AboutUs = () => {
   return (
@@ -62,18 +62,14 @@ const AboutUs = () => {
               </span>
 
               <h2 className={Home.aboutTitle}>
-                Delivering Advanced Industrial
-                Furnace Solutions Since 2014
+                Precision Engineering, Smarter Solutions Since 2005
               </h2>
 
               <p className={Home.aboutText}>
 
-                We initially started our journey around 11 years back as
-                <b> FIELDMAN CONTROL SYSTEM </b>
-                but after achieving successful growth we launched our
-                new venture
+                Your trusted partner for end-to-end industrial solutions built for the steel industry
                 <b> Fieldman Induction </b>
-                in 2014.
+                Fieldman Induction which was formed in the year 2005
 
                 <br /><br />
 

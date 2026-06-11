@@ -4,28 +4,28 @@ import styles from '@/styles/home/division.module.css';
 const divisions = [
   {
     title: "Fieldman Control System",
-    image: "/slide 1.jpg",
+    image: "/fieldman-control-system.png",
     description:
       "Automation, controls and industrial instruments for factory and plant operations.",
   },
   {
     title: "Fieldman Induction",
-    image: "/slide 2.jpg",
+    image: "/fieldman-induction.png",
     description:
       "Induction furnace assemblies, furnace coils, heating spares and allied products.",
   },
   {
     title: "Fieldman Sensors",
-    image: "/slide 3.jpg",
+    image: "/fieldman-sensor.png",
     description:
       "Temperature sensors, measurement products and sensing solutions for core industries.",
   },
-  {
-    title: "Fieldman Group",
-    image: "/slide 1.jpg",
-    description:
-      "A connected industrial group serving steel, foundry, petrochemical and furnace sectors.",
-  },
+  // {
+  //   title: "Fieldman Group",
+  //   image: "/slide 1.jpg",
+  //   description:
+  //     "A connected industrial group serving steel, foundry, petrochemical and furnace sectors.",
+  // },
 ];
 
 export default function DIVISIONS() {
@@ -34,7 +34,7 @@ export default function DIVISIONS() {
       <div className="container">
         <div className={styles.sectionHeader}>
           <span>OUR DIVISIONS</span>
-          <h2>One group, focused industrial capabilities.</h2>
+          <h2>One Group, Focused Industrial Capabilities.</h2>
         </div>
 
         <div className={styles.divisionsGrid}>
