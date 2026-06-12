@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import Layout from "@/components/layout";
 import { useEffect } from "react";
 
@@ -21,6 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Layout>
         <Component {...pageProps} />
+        <FloatingWhatsApp />
       </Layout>
     </>
   );

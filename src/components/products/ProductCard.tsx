@@ -1,20 +1,23 @@
 import Link from 'next/link';
-
+import { Product } from "@/data/productsData";
 import styles from '@/styles/products/ProductCard.module.css';
 
-type ProductProps = {
+// type ProductProps = {
 
-  product: {
-    name: string;
-    slug: string;
-    image: string;
-    shortDescription: string;
-  };
+//   product: {
+//     name: string;
+//     slug: string;
+//     image: string;
+//     shortDescription: string;
+//   };
+// };
+ type Props = {
+  product: Product;
 };
 
 export default function ProductCard({
   product
-}: ProductProps) {
+}: Props) {
 
   return (
 

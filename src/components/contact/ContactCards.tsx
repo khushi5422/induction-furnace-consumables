@@ -1,67 +1,172 @@
+import { useState } from "react";
+
 import {
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
-  FaClock,
-} from 'react-icons/fa';
+  FaClock
+} from "react-icons/fa";
 
-import styles from '@/styles/Contact.module.css';
+import styles from '@/styles/ContactCard.module.css';
 
-const cards = [
+const organizations = [
   {
-    icon: <FaPhoneAlt />,
-    title: 'Call Us',
-    info: '+91 98989 97644',
+    slug: "induction",
+    name: "Fieldman Induction",
+
+    phone: "+91 98989 97644",
+
+    emails: ["Sales.fieldx@gmail.com",
+      "fieldmaninduction@gmail.com",
+      "inductionspare@gmail.com"],
+
+    location: "Khatraj , Ahmedabad, Gujarat, India",
+
+    timing: "Mon - Sat : 9 AM - 7 PM"
   },
+
   {
-    icon: <FaEnvelope />,
-    title: 'Email Address',
-    info: 'sales.fieldman89@gmail.com',
+    slug: "sensors",
+    name: "Fieldman Sensors Pvt. Ltd.",
+
+    phone: "+91 982585 2299",
+
+    emails: ["sales.fieldx@gmail.com", 
+      "fieldmanexport@gmail.com"],
+
+    location: "Satej , Ahmedabad, Gujarat, India",
+
+    timing: "Mon - Sat : 9 AM - 6 PM"
   },
+
   {
-    icon: <FaMapMarkerAlt />,
-    title: 'Location',
-    info: 'Ahmedabad, Gujarat, India',
-  },
-  {
-    icon: <FaClock />,
-    title: 'Working Hours',
-    info: 'Mon - Sat : 9 AM - 7 PM',
-  },
+    slug: "control",
+    name: "Fieldman Control System",
+
+    phone: "+91 990990 3802",
+
+    emails: ["fcsautomation@yahoo.co.in", 
+      "info@fcsautomation.com"],
+
+    location: "Science City , Ahmedabad, Gujarat, India",
+
+    timing: "Mon - Sat : 10 AM - 7 PM"
+  }
 ];
 
-export default function ContactCards() {
+export default function ContactDirectory() {
+
+  const [activeOrg, setActiveOrg] = useState(
+    organizations[0]
+  );
 
   return (
-    <section className={styles.cardsSection}>
 
-      <div className={styles.grid}>
+    <section className={styles.directorySection}>
 
-        {cards.map((item, index) => (
+      <div className={styles.directoryHeader}>
 
-          <div
-            key={index}
-            className={styles.card}
+        <span>
+          CONTACT DIRECTORY
+        </span>
+
+        <h2>
+          Connect with the right Fieldman organization
+        </h2>
+
+      </div>
+
+      <div className={styles.organizationTabs}>
+
+        {organizations.map((org) => (
+
+          <button
+            key={org.slug}
+            onClick={() => setActiveOrg(org)}
+            className={
+              activeOrg.slug === org.slug
+                ? styles.activeTab
+                : styles.tab
+            }
           >
-
-            <div className={styles.icon}>
-              {item.icon}
-            </div>
-
-            <h3>
-              {item.title}
-            </h3>
-
-            <p>
-              {item.info}
-            </p>
-
-          </div>
+            {org.name}
+          </button>
 
         ))}
 
       </div>
 
+      <div className={styles.contactGrid}>
+
+        <div className={styles.contactCard}>
+
+          <div className={styles.iconWrap}>
+            <FaPhoneAlt />
+          </div>
+
+          <div>
+            <h4>Call Us</h4>
+            <p>{activeOrg.phone}</p>
+          </div>
+
+        </div>
+
+        <div className={styles.contactCard}>
+
+          <div className={styles.iconWrap}>
+            <FaEnvelope />
+          </div>
+
+          <div>
+            <h4>Email Address</h4>
+            <div className={styles.emailList}>
+
+              {activeOrg.emails.map((email) => (
+
+                <a
+                  key={email}
+                  href={`mailto:${email}`}
+                  className={styles.emailItem}
+                >
+                  {email}
+                </a>
+
+              ))}
+
+            </div>
+          </div>
+
+        </div>
+
+        <div className={styles.contactCard}>
+
+          <div className={styles.iconWrap}>
+            <FaMapMarkerAlt />
+          </div>
+
+          <div>
+            <h4>Location</h4>
+            <p>{activeOrg.location}</p>
+          </div>
+
+        </div>
+
+        <div className={styles.contactCard}>
+
+          <div className={styles.iconWrap}>
+            <FaClock />
+          </div>
+
+          <div>
+            <h4>Working Hours</h4>
+            <p>{activeOrg.timing}</p>
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
+
   );
 }

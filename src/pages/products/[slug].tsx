@@ -37,10 +37,10 @@ export default function ProductDetailsPage() {
           {product.name} | Fieldman Groups
         </title>
 
-        <meta
+        {/* <meta
           name="description"
           content={product.shortDescription}
-        />
+        /> */}
       </Head>
 
       <section className={styles.hero}>
@@ -69,9 +69,23 @@ export default function ProductDetailsPage() {
                 {product.name}
               </h1>
 
-              <p>
-                {product.shortDescription}
-              </p>
+              <ul>
+
+                {Array.isArray(product.shortDescription) ? (
+
+                  product.shortDescription.map((point, index) => (
+                    <li key={index}>
+                      {point}
+                    </li>
+                  ))
+
+                ) : (
+
+                  <li>{product.shortDescription}</li>
+
+                )}
+
+              </ul>
 
               <div className={styles.actions}>
 

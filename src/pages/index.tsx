@@ -1,12 +1,10 @@
 import Homecarousel from "@/components/home/homecarousel";
 import Owner from "@/components/home/owner";
-import STRENGTH from "@/components/home/strength";
 import AboutUs from "@/components/home/aboutus";
 import GroupSection from "@/components/home/groupsection";
 import ProductImageCarousel from "@/components/home/productImageCarousel";
 import SectionTab from "@/components/home/sectionTabs";
 import Head from "next/head";
-import DIVISIONS from "@/components/home/division";
 import ProductsSection from '@/components/home/productSection';
 
 
@@ -21,13 +19,11 @@ export default function Home() {
       <Homecarousel />
       <AboutUs />
       <GroupSection /> 
-      {/* <STRENGTH />  */}
       {/* Global Clients  */}
       <ProductImageCarousel /> 
       {/* Images CHnage  */}
       <SectionTab />
       <ProductsSection />
-      {/* <DIVISIONS /> */}
       <Owner />
     </>);
 }

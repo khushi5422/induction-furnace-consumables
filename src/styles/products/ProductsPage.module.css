@@ -1,33 +1,366 @@
-.productsSection {
-  padding: 90px 0;
+.hero {
+  position: relative;
 
-  background: #f6f8fa;
+  min-height: 540px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  background:
+    url("/industrial-hero.jpg")
+    center/cover no-repeat;
 }
 
-.container {
-  width: min(1320px, calc(100% - 40px));
+.heroOverlay {
+  position: absolute;
+  inset: 0;
 
+  background:
+    linear-gradient(
+      135deg,
+      rgba(15, 23, 42, 0.86),
+      rgba(15, 23, 42, 0.72)
+    );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+
+  max-width: 860px;
+
+  padding: 0 24px;
+}
+
+.heroContent span {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: #ff4d34;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.heroContent h1 {
+  margin-bottom: 24px;
+
+  color: white;
+
+  font-size: clamp(42px, 6vw, 76px);
+
+  line-height: 1.05;
+  font-weight: 650;
+}
+
+.heroContent p {
   margin: 0 auto;
+
+  max-width: 760px;
+
+  color: rgba(255,255,255,0.78);
+
+  font-size: 18px;
+  line-height: 1.8;
 }
 
-.layout {
+.organizationSection {
+  margin-top: -90px;
+
+  position: relative;
+  z-index: 5;
+
+  padding: 0 24px;
+}
+
+.organizationSection {
+  position: relative;
+  z-index: 5;
+
+  margin-top: -70px;
+
+  padding: 0 24px;
+}
+
+.organizationGrid {
+  max-width: 1320px;
+
+  margin: auto;
+
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
-  grid-template-columns:
-    320px 1fr;
-
-  gap: 42px;
+  gap: 18px;
 }
 
-.content {
-  min-width: 0;
+.organizationCard,
+.organizationCardActive {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  min-height: 110px;
+
+  padding: 24px 28px;
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  text-align: left;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
-.headingRow {
-  margin-bottom: 34px;
+.organizationCard {
+  border: 1px solid #e7ecf2;
+
+  background:
+    rgba(255,255,255,0.92);
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 10px 35px rgba(15, 23, 42, 0.06);
 }
 
-.headingRow span {
+.organizationCard:hover {
+  transform: translateY(-4px);
+
+  border-color:
+    rgba(185, 15, 0, 0.18);
+
+  box-shadow:
+    0 18px 45px rgba(15, 23, 42, 0.12);
+}
+
+.organizationCardActive {
+  border: 1px solid transparent;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b90f00,
+      #d91c04
+    );
+
+  box-shadow:
+    0 18px 40px rgba(185, 15, 0, 0.26);
+}
+
+.organizationCardActive::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(255,255,255,0.18),
+      transparent 40%
+    );
+}
+
+.organizationBadge {
+  position: relative;
+  z-index: 2;
+
+  min-width: 64px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  font-size: 24px;
+  font-weight: 800;
+
+  background:
+    rgba(255,255,255,0.12);
+
+  color: white;
+
+  backdrop-filter: blur(8px);
+}
+
+.organizationCard .organizationBadge {
+  background:
+    linear-gradient(
+      135deg,
+      #b90f00,
+      #d91c04
+    );
+}
+
+.organizationCard h3,
+.organizationCardActive h3 {
+  margin: 0 0 6px;
+
+  font-size: 20px;
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+.organizationCard h3 {
+  color: #111827;
+}
+
+.organizationCardActive h3 {
+  color: white;
+}
+
+.organizationCard p,
+.organizationCardActive p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.organizationCard p {
+  color: #5f6873;
+}
+
+.organizationCardActive p {
+  color: rgba(255,255,255,0.82);
+}
+
+.organizationCard h3,
+.organizationCardActive h3 {
+  margin: 0 0 8px;
+
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.organizationCard p,
+.organizationCardActive p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.organizationCard p {
+  color: #64748b;
+}
+
+.organizationCardActive p {
+  color: rgba(255,255,255,0.82);
+}
+
+.categorySection {
+  padding: 60px 24px 20px;
+}
+
+.categoryTabs {
+  max-width: 1320px;
+
+  margin: auto;
+
+  display: flex;
+  gap: 14px;
+
+  overflow-x: auto;
+}
+
+.categoryTabs {
+  max-width: 1320px;
+
+  margin: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 16px;
+}
+
+.categoryButton,
+.categoryActive {
+  min-height: 56px;
+
+  padding: 16px 26px;
+
+  border-radius: 16px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  letter-spacing: 0.2px;
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    background 0.28s ease;
+}
+
+.categoryButton {
+  border: 1px solid #e5e7eb;
+
+  background: white;
+
+  color: #111827;
+
+  box-shadow:
+    0 6px 18px rgba(15, 23, 42, 0.04);
+}
+
+.categoryButton:hover {
+  transform: translateY(-2px);
+
+  border-color:
+    rgba(185, 15, 0, 0.22);
+
+  background:
+    rgba(255, 245, 243, 0.8);
+}
+
+.categoryActive {
+  border: none;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b90f00,
+      #d91c04
+    );
+
+  box-shadow:
+    0 12px 28px rgba(185, 15, 0, 0.22);
+}
+
+.productsSection {
+  padding: 56px 24px 110px;
+}
+
+.productsHeading {
+  max-width: 1320px;
+  margin: auto auto 34px;
+}
+
+.productsHeading span {
   display: inline-block;
 
   margin-bottom: 12px;
@@ -35,27 +368,178 @@
   color: #b90f00;
 
   font-size: 13px;
-
   font-weight: 800;
 
-  letter-spacing: 1.8px;
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
 }
 
-.headingRow h2 {
+.productsHeading h2 {
   margin: 0;
 
-  color: #111827;
+  color: #0f172a;
 
-  font-size: clamp(32px, 4vw, 48px);
-
-  line-height: 1.15;
+  font-size: clamp(36px, 4vw, 62px);
 
   font-weight: 850;
 }
 
-@media (max-width: 991px) {
+.productGrid {
+  max-width: 1320px;
 
-  .layout {
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+}
+
+.productCard {
+  overflow: hidden;
+
+  border-radius: 26px;
+
+  background: white;
+
+  border: 1px solid #e5e7eb;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.productCard:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 24px 55px rgba(15, 23, 42, 0.12);
+}
+
+.productImageWrap {
+  height: 260px;
+
+  background: #0f172a;
+}
+
+.productImage {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.productContent {
+  padding: 28px;
+}
+
+.productContent h3 {
+  margin: 0 0 18px;
+
+  color: #0f172a;
+
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.productContent ul {
+  padding-left: 18px;
+
+  margin-bottom: 28px;
+}
+
+.productContent li {
+  margin-bottom: 10px;
+
+  color: #64748b;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.productActions {
+  display: flex;
+  gap: 14px;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 24px;
+
+  border-radius: 14px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.primaryBtn{
+  background:
+    linear-gradient(
+      135deg,
+      #b90f00,
+      #d91c04
+    );
+
+  color: white;
+}
+
+.primaryBtn:hover{
+  transform: translateY(-2px);
+}
+
+.secondaryBtn {
+  border: 1px solid #e5e7eb;
+
+  background: white;
+
+  color: #0f172a;
+}
+
+
+@media (max-width: 1100px) {
+
+  .organizationGrid,
+  .productGrid {
     grid-template-columns: 1fr;
   }
+
+}
+
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: 480px;
+  }
+
+  .heroContent h1 {
+    font-size: 42px;
+  }
+
+  .organizationCard,
+  .organizationCardActive {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .productsHeading h2 {
+    font-size: 40px;
+  }
+
+  .productContent {
+    padding: 22px;
+  }
+
+  .productContent h3 {
+    font-size: 24px;
+  }
+
 }

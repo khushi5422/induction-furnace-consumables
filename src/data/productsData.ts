@@ -2,7 +2,7 @@ export type Product = {
   name: string;
   slug: string;
   image: string;
-  shortDescription: string;
+  shortDescription: string | string[];
 };
 
 export type ProductGroup = {
@@ -45,8 +45,9 @@ export const productOrganizations = [
 
             image: "/steel-melting-furnace-assembly.png",
 
-            shortDescription:
+            shortDescription: [
               "Industrial furnace assembly systems designed for steel melting operations.",
+            ],
           },
 
           {
@@ -151,24 +152,6 @@ export const productOrganizations = [
 
             shortDescription: "refractory-top-cast-ring-set",
           },
-          // {
-          //   name: "Refractory Bottom Cast Ring Set ",
-
-          //   slug: "refractory-bottom-cast-ring-set",
-
-          //   image: "/refractory-bottom-cast-ring-set.png",
-
-          //   shortDescription: "refractory-bottom-cast-ring-set",
-          // },
-          // {
-          //   name: "Pusher Block Casting ",
-
-          //   slug: "pusher-block-casting",
-
-          //   image: "/pusher-block-casting.png",
-
-          //   shortDescription: "pusher-block-casting",
-          // },
         ],
       },
 
@@ -304,16 +287,6 @@ export const productOrganizations = [
             shortDescription: "furnace-switch",
           },
 
-          // {
-          //   name: "Isolation Switch",
-
-          //   slug: "isolation-switch",
-
-          //   image: "/isolation-switch.png",
-
-          //   shortDescription: "isolation-switch",
-          // },
-
           {
             name: "Selector Switch & Blades",
 
@@ -332,33 +305,6 @@ export const productOrganizations = [
 
             shortDescription: "water-cool-lead",
           },
-          // {
-          //   name: "Bus Bar Adapter",
-
-          //   slug: "bus-bar-adapter",
-
-          //   image: "/bus-bar-adapter.png",
-
-          //   shortDescription: "bus-bar-adapter",
-          // },
-          // {
-          //   name: "Carbon Free Hose",
-
-          //   slug: "carbon-free-hose",
-
-          //   image: "/carbon-free-hose.png",
-
-          //   shortDescription: "carbon-free-hose",
-          // },
-          // {
-          //   name: "Other WCL Components",
-
-          //   slug: "other-wlc-components",
-
-          //   image: "/other-wlc-components.png",
-
-          //   shortDescription: "other-wlc-components",
-          // },
         ],
       },
 
@@ -370,37 +316,34 @@ export const productOrganizations = [
 
         products: [
           {
-            name: "induction-furnace-coil-insulation",
+            name: "Induction Furnace Coil Insulation",
 
             slug: "furnace-insulation-spare",
 
             image: "/induction-furnace-coil-insulation.png",
-            shortDescription: "Permali & FRP Coil Support",
 
-            // shortDescription: [
-            //   "Permali & FRP Coil Support",
-            //   "Flexocoat & Biosphinol",
-            //   "FRP / Silicon / Woven Tape",
-            // ],
+            shortDescription: [
+              "Permali & FRP Coil Support",
+              "Flexocoat & Biosphinol",
+              "FRP / Silicon / Woven Tape",
+            ],
           },
 
           {
-            name: "hardware-frp-material-syndanio ",
+            name: "Hardware FRP Material Syndanio ",
 
             slug: "frp-mica-syndaniosheets",
 
             image: "/hardware-frp-material-syndanio.png",
 
-            shortDescription: "FRP / Mica / Syndanio Sheets",
-
-            // shortDescription: [
-            //   "FRP / Mica / Syndanio Sheets",
-            //   "Permali TEE , Eye Bolt , Set Collar",
-            //   "FRP / Mica Tube & Washer",
-            //   "Teflon & Non Asbestos Sheet",
-            //   "FRP & Syndanio Spacers",
-            //   "SS & Brass Hardware",
-            // ],
+            shortDescription: [
+              "FRP / Mica / Syndanio Sheets",
+              "Permali TEE , Eye Bolt , Set Collar",
+              "FRP / Mica Tube & Washer",
+              "Teflon & Non Asbestos Sheet",
+              "FRP & Syndanio Spacers",
+              "SS & Brass Hardware",
+            ],
           },
         ],
       },
@@ -441,15 +384,6 @@ export const productOrganizations = [
 
             shortDescription: "pivot-rod-end-block",
           },
-          // {
-          //   name: "Cylinder Shroud ",
-
-          //   slug: "cylinder-shroud",
-
-          //   image: "/cylinder-shroud.png",
-
-          //   shortDescription: "cylinder-shroud",
-          // },
           {
             name: "Hydraulic Flexible Hoses  & Seal kits ",
 
@@ -459,24 +393,6 @@ export const productOrganizations = [
 
             shortDescription: "hydraulic-flexible-hoses",
           },
-          // {
-          //   name: " ",
-
-          //   slug: "seal-kits-seals",
-
-          //   image: "/seal-kits-seals.png",
-
-          //   shortDescription: "seal-kits-seals",
-          // },
-          // {
-          //   name: "Valves & Bearings",
-
-          //   slug: "valves-bearings",
-
-          //   image: "/valves-bearings.png",
-
-          //   shortDescription: "valves-bearings",
-          // },
           {
             name: "Hydraulic Fittings ",
 
@@ -503,75 +419,17 @@ export const productOrganizations = [
 
             image: "/power-components-sensors.png",
 
-            shortDescription: "Thyristor , Diode & Fuse", 
-
-            // shortDescription: [
-            //   "thyristor-diode-fuse",
-            //   "Thyristor , Diode & Fuse",
-            //   "SCR & Diode Clamp Assembly",
-            //   "Chill Blocks",
-            //   "Temperature  Sensors",
-            //   "Temperature Gauges",
-            //   "Pressure Switch & Gauge",
-            //   "Flow Switch",
-            // ],
+            shortDescription: [
+              "thyristor-diode-fuse",
+              "Thyristor , Diode & Fuse",
+              "SCR & Diode Clamp Assembly",
+              "Chill Blocks",
+              "Temperature  Sensors",
+              "Temperature Gauges",
+              "Pressure Switch & Gauge",
+              "Flow Switch",
+            ],
           },
-
-          // {
-          //   name: "SCR & Diode Clamp Assembly",
-
-          //   slug: "scr-diode-clamp-assembly",
-
-          //   image: "/scr-diode-clamp-assembly.png",
-
-          //   shortDescription: "scr-diode-clamp-assembly",
-          // },
-
-          // {
-          //   name: "Chill Blocks",
-
-          //   slug: "chill-blocks",
-
-          //   image: "/chill-blocks.png",
-
-          //   shortDescription: "chill-blocks",
-          // },
-          // {
-          //   name: "Temperature  Sensors /switches",
-
-          //   slug: "temperature-sensors-switches",
-
-          //   image: "/temperature-sensors-switches.png",
-
-          //   shortDescription: "temperature-sensors-switches",
-          // },
-          // {
-          //   name: "Temperature Gauges",
-
-          //   slug: "temperature-gauges",
-
-          //   image: "/temperature-gauges.png",
-
-          //   shortDescription: "temperature-gauges",
-          // },
-          // {
-          //   name: "Pressure Switch & Gauge",
-
-          //   slug: "pressure-switch-gauge",
-
-          //   image: "/pressure-switch-gauge.png",
-
-          //   shortDescription: "pressure-switch-gauge",
-          // },
-          // {
-          //   name: "Flow Switch",
-
-          //   slug: "flow-switch",
-
-          //   image: "/flow-switch.png",
-
-          //   shortDescription: "flow-switch",
-          // },
         ],
       },
     ],
@@ -649,13 +507,13 @@ export const productOrganizations = [
       // Accessories for TIPs
 
       {
-        title: "Accessories for TIPs",
+        title: "Accessories for Tips",
 
-        slug: "accessories-for-tIPs",
+        slug: "accessories-for-tips",
 
         products: [
           {
-            name: "meter-jumbo-display",
+            name: "Meter Jumbo Display",
 
             slug: "meter-jumbo-display",
 
@@ -671,7 +529,7 @@ export const productOrganizations = [
 
             image: "/lance-receptacle.png",
 
-            shortDescription: "lance-receptacle",
+            shortDescription: ["Lance", " Receptacle"],
           },
           {
             name: "Neoprene Cable",
@@ -680,7 +538,7 @@ export const productOrganizations = [
 
             image: "/neoprene-cable.png",
 
-            shortDescription: "neoprene-cable",
+            shortDescription: "Neoprene Cable",
           },
           {
             name: "Spectro Meter",
@@ -689,7 +547,7 @@ export const productOrganizations = [
 
             image: "/spectro-meter.png",
 
-            shortDescription: "spectro-meter",
+            shortDescription: "Spectro Meter",
           },
         ],
       },
@@ -709,17 +567,17 @@ export const productOrganizations = [
 
             image: "/casting-powder.png",
 
-            shortDescription: "casting-powder",
+            shortDescription: "Casting Powder",
           },
 
           {
-            name: "nozzle-filling-compound",
+            name: "Nozzle Filling Compound",
 
             slug: "nozzle-filling-compound",
 
             image: "/nozzle-filling-compound.png",
 
-            shortDescription: "nozzle-filling-compound",
+            shortDescription: "Nozzle Filling Compound",
           },
           {
             name: "Mortar",
@@ -728,7 +586,7 @@ export const productOrganizations = [
 
             image: "/mortar.png",
 
-            shortDescription: "mortar",
+            shortDescription: "Mortar",
           },
           {
             name: "Redex",
@@ -737,7 +595,7 @@ export const productOrganizations = [
 
             image: "/redex.png",
 
-            shortDescription: "redex",
+            shortDescription: "Redex",
           },
           {
             name: "tundish-nozzle",
@@ -748,15 +606,6 @@ export const productOrganizations = [
 
             shortDescription: "tundish-nozzle",
           },
-          // {
-          //   name: "Porous Plug",
-
-          //   slug: "porous-plug",
-
-          //   image: "/porous-plug.png",
-
-          //   shortDescription: "porous-plug",
-          // },
           {
             name: "Porous plug well Block",
 
@@ -764,7 +613,7 @@ export const productOrganizations = [
 
             image: "/porous-plug-well-block.png",
 
-            shortDescription: "porous-plug-well-block",
+            shortDescription: "Porous plug well Block",
           },
         ],
       },
@@ -784,26 +633,17 @@ export const productOrganizations = [
 
             image: "/copper-mold.png",
 
-            shortDescription: "copper-mold",
+            shortDescription: "Copper Mold",
           },
 
-          // {
-          //   name: "CI Plug",
-
-          //   slug: "ci-plug",
-
-          //   image: "/ci-plug.png",
-
-          //   shortDescription: "ci-plug",
-          // },
           {
             name: "Tundish Board",
 
             slug: "tundish-board",
 
-            image: "/tundish-board.png",
+            image: "/tundish-board-garseal.png",
 
-            shortDescription: "tundish-board",
+            shortDescription: "Tundish Board",
           },
         ],
       },
@@ -817,60 +657,14 @@ export const productOrganizations = [
 
         products: [
           {
-            name: "NSlide Gate System",
-
-            slug: "nslide-gate-system",
-
-            image: "/nslide-gate-system.png",
-
-            shortDescription: "nslide-gate-system",
-          },
-
-          {
-            name: "copper-mould-tube",
-
-            slug: "copper-mould-tube",
-
-            image: "/copper-mould-tube.png",
-
-            shortDescription: "copper-mould-tube",
-          },
-          // {
-          //   name: "Collector Nozzle",
-
-          //   slug: "collector-nozzle",
-
-          //   image: "/collector-nozzle.png",
-
-          //   shortDescription: "collector-nozzle",
-          // },
-          {
             name: "Ferro Alloys",
 
             slug: "ferro-alloys",
 
             image: "/ferro-alloys.png",
 
-            shortDescription: "ferro-alloys",
+            shortDescription: "Ferro Alloys",
           },
-          // {
-          //   name: "CPC / GPC",
-
-          //   slug: "cpc-gpc",
-
-          //   image: "/cpc-gpc.png",
-
-          //   shortDescription: "cpc-gpc",
-          // },
-          // {
-          //   name: "Side Gate 1QC , 2QC",
-
-          //   slug: "side-gate",
-
-          //   image: "/side-gate.png",
-
-          //   shortDescription: "side-gate",
-          // },
           {
             name: "Tundish & Ladle",
 
@@ -878,17 +672,8 @@ export const productOrganizations = [
 
             image: "/tundish-ladel.png",
 
-            shortDescription: "ladle ",
+            shortDescription: "Ladle ",
           },
-          // {
-          //   name: "Tundish",
-
-          //   slug: "tundish  ",
-
-          //   image: "/tundish.png",
-
-          //   shortDescription: "tundish  ",
-          // },
         ],
       },
 
@@ -907,7 +692,7 @@ export const productOrganizations = [
 
             image: "/hot-saw-cutting-machine.png",
 
-            shortDescription: "hot-saw-cutting-machine",
+            shortDescription: "Hot Saw Cutting Machine",
           },
 
           {
@@ -917,17 +702,8 @@ export const productOrganizations = [
 
             image: "/straightening-machine.png",
 
-            shortDescription: "straightening-machine",
+            shortDescription: "Straightening Machine",
           },
-          // {
-          //   name: "Panel",
-
-          //   slug: "panel",
-
-          //   image: "/panel.png",
-
-          //   shortDescription: "Panel",
-          // },
           {
             name: "Housing less Mill Stand & Panel",
 
@@ -935,7 +711,12 @@ export const productOrganizations = [
 
             image: "/housing-less-mill-stand-panel.png",
 
-            shortDescription: "housing-less-mill-stand",
+            shortDescription: [
+              "Panel",
+              "Housing less Mill Stand",
+              "Convertible Mill Stand",
+              "Universal Mill Stand",
+            ],
           },
         ],
       },
@@ -954,7 +735,14 @@ export const productOrganizations = [
 
             image: "/mill-rolls.png",
 
-            shortDescription: "adamite-sgip-rolls",
+            shortDescription: [
+              "CHILLED",
+              "EN9",
+              "EN42",
+              "Rolls ",
+              "Adamite",
+              "SGIP Rolls",
+            ],
           },
         ],
       },
@@ -974,16 +762,16 @@ export const productOrganizations = [
 
             image: "/lancing-pipe-dummy-bar-bolt.png",
 
-            shortDescription: "lancing-pipe",
+            shortDescription: ["Dummy Bar Bolt ", "Lancing Pipe"],
           },
           {
             name: "Chain ,Gear Coupling , Motors  & Gears",
 
             slug: "motors-gears",
 
-            image: "/motors-gear-coupling-chain.png",
+            image: "/motors-gear-coupling -chain.png",
 
-            shortDescription: "motors-gears",
+            shortDescription: ["Chain", "Gear Coupling", "Motors ", " Gears"],
           },
         ],
       },
@@ -1003,45 +791,14 @@ export const productOrganizations = [
 
             image: "/lifting-equipment.png",
 
-            shortDescription: "lifting-magnets",
+            shortDescription: [
+              "Lifting Magnets",
+              "Hydraulic Scrap Pusher",
+              "Crane",
+              "Scrap  (MS ,HMS , SS)",
+              "Billets",
+            ],
           },
-
-          // {
-          //   name: "Hydraulic Scrap Pusher",
-
-          //   slug: "hydraulic-scrap-pusher",
-
-          //   image: "/hydraulic-scrap-pusher.png",
-
-          //   shortDescription: "hydraulic-scrap-pusher",
-          // },
-          // {
-          //   name: "Crane",
-
-          //   slug: "crane",
-
-          //   image: "/crane.png",
-
-          //   shortDescription: "crane",
-          // },
-          // {
-          //   name: "Scrap  (MS ,HMS , SS)",
-
-          //   slug: "scrap",
-
-          //   image: "/scrap.png",
-
-          //   shortDescription: "scrap",
-          // },
-          // {
-          //   name: "Billets",
-
-          //   slug: "billets",
-
-          //   image: "/billets.png",
-
-          //   shortDescription: "billets",
-          // },
         ],
       },
     ],
@@ -1068,352 +825,206 @@ export const productOrganizations = [
 
         products: [
           {
-            name: "Digital Multimeter &  Clamp Meter",
+            name: "FLUKE Instruments",
 
-            slug: "digital-multimeter-clamp-meter",
+            slug: "fluke-instruments",
 
-            image: "/digital-multimeter-clamp-meter.png",
+            image: "/fieldman-control-system.png",
 
-            shortDescription: "digital-multimeter-clamp-meter",
-          },
-
-          {
-            name: "Infrared Pyrometer & Thermal Imagers",
-
-            slug: "infrared-pyrometer-thermal-imagers",
-
-            image: "/infrared-pyrometer-thermal-imagers.png",
-
-            shortDescription: "infrared-pyrometer-thermal-imagers",
-          },
-          {
-            name: "Insulation & Earth Resistance Tester",
-
-            slug: "insulation-earth-resistance-tester",
-
-            image: "/insulation-earth-resistance-tester.png",
-
-            shortDescription: "insulation-earth-resistance-tester",
-          },
-          {
-            name: "Lux Meter, Sound Meter, Anemometer",
-
-            slug: "lux-meter-sound-meter-anemometer",
-
-            image: "/lux-meter-sound-meter-anemometer.png",
-
-            shortDescription: "lux-meter-sound-meter-anemometer",
-          },
-          {
-            name: "Contact & Non-contact Tachometer",
-
-            slug: "contact-non-contact-tachometer",
-
-            image: "/contact-non-contact-tachometer.png",
-
-            shortDescription: "contact-non-contact-tachometer",
-          },
-          {
-            name: "laser-distance-meter",
-
-            slug: "laser-distance-meter",
-
-            image: "/laser-distance-meter.png",
-
-            shortDescription: "laser-distance-meter",
+            shortDescription: [
+              "Digital Multimeter &  Clamp Meter",
+              "Infrared Pyrometer & Thermal Imagers",
+              "Insulation & Earth Resistance Tester",
+              "Lux Meter, Sound Meter, Anemometer",
+              "Contact & Non-contact Tachometer",
+              "Laser Distance Meter",
+            ],
           },
         ],
       },
       // // KYORITSU Instruments
-      //       {
-      //         title: "KYORITSU Instruments",
+      {
+        title: "KYORITSU Instruments",
+
+        slug: "kyoritsu-instruments",
+
+        products: [
+          {
+            name: "KYORITSU Instruments",
+
+            slug: "kyoritsu-instruments",
+
+            image: "/kyoritsu.png",
 
-      //         slug: "kyoritsu-instruments",
+            shortDescription: [
+              "Clamp meter,  Voltage Tester ",
+              "Earth Resistance Tester",
+              "RCD/ELCB Tester",
+              "1KV to 12KV Insulation Tester ",
+              "Power Quality Meter & Analyzer ",
+            ],
+          },
+        ],
+      },
 
-      //         products: [
-
-      //           {
-      //             name: "HVAC Digital Multimeter",
-
-      //             slug: "hvac-digital-multimeter",
-
-      //             image: "/hvac-digital-multimeter.png",
-
-      //             shortDescription:
-      //               "hvac-digital-multimeter",
-      //           },
-
-      //           {
-      //             name: "Clamp Meter,  Voltage Tester ",
-
-      //             slug: "clamp-meter-voltage-tester",
-
-      //             image: "/clamp-meter-voltage-tester.png",
-
-      //             shortDescription:
-      //               "clamp-meter-voltage-tester",
-      //           },
-      //           {
-      //             name: "Earth Resistance Tester",
-
-      //             slug: "earth-resistance-tester",
-
-      //             image: "/earth-resistance-tester.png",
-
-      //             shortDescription:
-      //               "earth-resistance-tester",
-      //           },
-      //           {
-      //             name: "RCD/ELCB Tester",
-
-      //             slug: "rcd-elcb-tester",
-
-      //             image: "/rcd-elcb-tester.png",
-
-      //             shortDescription:
-      //               "rcd-elcb-tester",
-      //           },
-      //           {
-      //             name: "Insulation Tester",
-
-      //             slug: "insulation-tester",
-
-      //             image: "/insulation-tester.png",
-
-      //             shortDescription:
-      //               "1KV to 12KV Insulation Tester",
-      //           },
-      //           {
-      //             name: "Power Quality Meter & Analyzer ",
-
-      //             slug: "power-quality-meter-analyzer ",
-
-      //             image: "/power-quality-meter-analyzer.png",
-
-      //             shortDescription:
-      //               "Power Quality Meter & Analyzer ",
-      //           },
-      //         ],
-      //       },
-
-      //       // TESTO Instruments
-
-      //       {
-      //         title: "TESTO Instruments",
-
-      //         slug: "testo-instruments",
-
-      //         products: [
-
-      //           {
-      //             name: "Thermo  Hydrometer & Datalogger",
-
-      //             slug: "thermo-hydrometer-datalogger",
-
-      //             image: "/thermo-hydrometer-datalogger.png",
-
-      //             shortDescription:
-      //               "thermo-hydrometer-datalogger",
-      //           },
-
-      //           {
-      //             name: "Material Moisture Meter",
-
-      //             slug: "material-moisture-meter",
-
-      //             image: "/material-moisture-meter.png",
-
-      //             shortDescription:
-      //               "material-moisture-meter",
-      //           },
-      //           {
-      //             name: "Food Moisture meter",
-
-      //             slug: "food-moisture-meter",
-
-      //             image: "/food-moisture-meter.png",
-
-      //             shortDescription:
-      //               "Food Moisture meter",
-      //           },
-      //           {
-      //             name: "Immersion & Surface Thermometer",
-
-      //             slug: "immersion-surface-thermometer",
-
-      //             image: "/immersion-surface-thermometer.png",
-
-      //             shortDescription:
-      //               "immersion-surface-thermometer",
-      //           },
-      //           {
-      //             name: "Smart Probes for various Applications",
-
-      //             slug: "smart-probes",
-
-      //             image: "/smart-probes.png",
-
-      //             shortDescription:
-      //               "Smart Probes for various Applications",
-      //           },
-      //           {
-      //             name: "Environment meters",
-
-      //             slug: "environment-meters",
-
-      //             image: "/environment-meters.png",
-
-      //             shortDescription:
-      //               "Environment meters",
-      //           },
-      //         ],
-      //       },
-
-      //       // Instruments for SOLAR
-
-      //       {
-      //         title: "Instruments for SOLAR",
-
-      //         slug: "instruments-for-solar",
-
-      //         products: [
-
-      //           {
-      //             name: "1500V Multimeter",
-
-      //             slug: "1500v-multimeter",
-
-      //             image: "/1500v-multimeter.png",
-
-      //             shortDescription:
-      //               "1500v-multimeter",
-      //           },
-
-      //           {
-      //             name: "1000A/2000A, 1500V Clampmeter",
-
-      //             slug: "1000a-clampmeter",
-
-      //             image: "/1000a-clampmeter.png",
-
-      //             shortDescription:
-      //               "1000a-clampmeter",
-      //           },
-      //           {
-      //             name: "Earth Resistance Tester",
-
-      //             slug: "earth-resistance-tester",
-
-      //             image: "/earth-resistance-tester.png",
-
-      //             shortDescription:
-      //               "earth-resistance-tester",
-      //           },
-      //           {
-      //             name: "Insulation Tester",
-
-      //             slug: "insulation-tester",
-
-      //             image: "/insulation-tester.png",
-
-      //             shortDescription:
-      //               "insulation-tester",
-      //           },
-      //           {
-      //             name: "Solar Irradiance Meter",
-
-      //             slug: "solar-irradiance-meter",
-
-      //             image: "/solar-irradiance-meter.png",
-
-      //             shortDescription:
-      //               "solar-irradiance-meter",
-      //           },
-      //           {
-      //             name: "Infrared Pyrometers & Thermal Imagers",
-
-      //             slug: "infrared-pyrometers-thermal-imagers",
-
-      //             image: "/infrared-pyrometers-thermal-imagers.png",
-
-      //             shortDescription:
-      //               "infrared-pyrometers-thermal-imagers",
-      //           },
-      //         ],
-      //       },
-
-      //        // last page remaining because of no title
-
-      //       {
-      //         title: "Instruments for SOLAR",
-
-      //         slug: "instruments-for-solar",
-
-      //         products: [
-
-      //           {
-      //             name: "Proximity Sensor",
-
-      //             slug: "proximity-sensor",
-
-      //             image: "/proximity-sensor.png",
-
-      //             shortDescription:
-      //               "proximity-sensor",
-      //           },
-
-      //           {
-      //             name: "Photoelectric Sensor",
-
-      //             slug: "photoelectric-sensor",
-
-      //             image: "/photoelectric-sensor.png",
-
-      //             shortDescription:
-      //               "photoelectric-sensor",
-      //           },
-      //           {
-      //             name: "Earth Resistance Tester",
-
-      //             slug: "earth-resistance-tester",
-
-      //             image: "/earth-resistance-tester.png",
-
-      //             shortDescription:
-      //               "earth-resistance-tester",
-      //           },
-      //           {
-      //             name: "Insulation Tester",
-
-      //             slug: "insulation-tester",
-
-      //             image: "/insulation-tester.png",
-
-      //             shortDescription:
-      //               "insulation-tester",
-      //           },
-      //           {
-      //             name: "Solar Irradiance Meter",
-
-      //             slug: "solar-irradiance-meter",
-
-      //             image: "/solar-irradiance-meter.png",
-
-      //             shortDescription:
-      //               "solar-irradiance-meter",
-      //           },
-      //           {
-      //             name: "Infrared Pyrometers & Thermal Imagers",
-
-      //             slug: "infrared-pyrometers-thermal-imagers",
-
-      //             image: "/infrared-pyrometers-thermal-imagers.png",
-
-      //             shortDescription:
-      //               "infrared-pyrometers-thermal-imagers",
-      //           },
-      //         ],
-      //       },
+      // TESTO Instruments
+
+      {
+        title: "TESTO Instruments",
+
+        slug: "testo-instruments",
+
+        products: [
+          {
+            name: "   Testo Pocket sized measuring instruments",
+
+            slug: "testo-instruments",
+
+            image: "/testo.png",
+
+            shortDescription: [
+              "Thermo  Hydrometer & Datalogger",
+              "Material Moisture meter",
+              "Food Moisture meter",
+              "Immersion & surface thermometer",
+              "Smart Probes for various Applications",
+              "Environment meters",
+            ],
+          },
+        ],
+      },
+
+      // Instruments for SOLAR
+
+      {
+        title: "Instruments for SOLAR",
+
+        slug: "instruments-for-solar",
+
+        products: [
+          {
+            name: "Measuring Instruments for Solar Industry",
+
+            slug: "instruments-for-solar",
+
+            image: "/instruments-for-solar.png",
+
+            shortDescription: [
+              "1500V Multimeter",
+              "1000A/2000A, 1500V Clampmeter",
+              "Earth Resistance Tester",
+              "Insulation Tester",
+              "Earth Resistance Tester",
+              "Solar Irradiance Meter",
+              "Infrared Pyrometers",
+              "Thermal Imagers",
+            ],
+          },
+        ],
+      },
+      // Sensors
+      {
+        title: "Sensors",
+
+        slug: "sensors",
+
+        products: [
+          {
+            name: "Sensors",
+
+            slug: "sensors",
+
+            image: "/sensors.png",
+
+            shortDescription: [
+              "Proximity Sensor",
+              "Photoelectric Sensor",
+              "Earth Resistance Tester",
+              "Insulation Tester",
+              "Solar Irradiance Meter",
+              "Infrared Pyrometers & Thermal Imagers",
+            ],
+          },
+        ],
+      },
+
+      // Timer & Controller
+
+      {
+        title: "Timer & Controller",
+
+        slug: "timer-controller",
+
+        products: [
+          {
+            name: "Timer & Controller",
+
+            slug: "timer-controller",
+
+            image: "/timer-controller.png",
+
+            shortDescription: [
+              "Analogue & Digital Timers",
+              "Multifunction & Preset Counters",
+              "PID & Temperature Controllers",
+              "Multifunction Panel meters",
+              "Paperless Data Recorders",
+              "Various Converters",
+              "Thyristor Units & DPUs",
+            ],
+          },
+        ],
+      },
+
+      // PLC & HMI
+      {
+        title: "PLC & HMI",
+
+        slug: "plc-hmi",
+
+        products: [
+          {
+            name: "PLC & HMI",
+
+            slug: "plc-hmi",
+
+            image: "/plc-hmi.png",
+
+            shortDescription: [
+              "Programable Logic Controller(PLC)",
+              "Human Machine Interface(HIMIs)",
+              "Variable Frequency Drivers (VFDs)",
+              "Servo Motor & Drives",
+            ],
+          },
+        ],
+      },
+
+      // SMPS
+      {
+        title: "Power Supply",
+
+        slug: "power-supply",
+
+        products: [
+          {
+            name: "Power Supply",
+
+            slug: "power-supply",
+
+            image: "/smps.png",
+
+            shortDescription: [
+              "Power Supply(SMPs)",
+              "General Purpose & PCB Relays",
+              "Phase Sequence Relays",
+              "Solid State Relays(SSR)",
+              "Limit Switches , Micro Switches",
+              "Tower Lights , Signal Lights",
+            ],
+          },
+        ],
+      },
     ],
   },
 ];

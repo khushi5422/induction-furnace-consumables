@@ -8,23 +8,21 @@ import Product from '@/styles/home/productsSection.module.css';
 const productCategories = [
     {
         category: 'Induction Furnace Assembly',
-        description:
-            'We Manufacture Induction Melting Furnace Assembly.',
 
         products: [
             {
                 name: 'Steel Melting Furnace Assembly',
-                image: '/steel-melting-furnace-assembly.png',
+                image: '/home-steel-melting-furnace.png',
                 link: '/products/steel-melting-furnace-assembly',
             },
             {
                 name: 'Induction Furnace Coil',
-                image: '/Inverter-Scr.jpg',
+                image: '/home-steel-melting-coil.png',
                 link: '/products',
             },
             {
                 name: 'Top Bottom Spares',
-                image: '/pedestal-bearing.jpg',
+                image: '/home-refractory-top.png',
                 link: '/products',
             }
         ],
@@ -36,16 +34,16 @@ const productCategories = [
         products: [
             {
                 name: 'Temperature Tips , Lollypop Sampler & Thermocouple',
-                image: '/Inverter-Scr.jpg',
+                image: '/fieldman-sensor.png',
                 link: '/products',
             },
             {
                 name: 'Measuring Instruments',
-                image: '/valves.jpg',
+                image: '/measuring-instruments-lance-receptacle.png',
                 link: '/products',
             },{
                 name: 'Powder Refractories Manufacturer',
-                image: '/pedestal-bearing.jpg',
+                image: '/home-powder-refractories.png',
                 link: '/products',
             }
 
@@ -58,27 +56,17 @@ const productCategories = [
         products: [
             {
                 name: 'Fluke',
-                image: '/Inverter-Scr.jpg',
+                image: '/fieldman-control-system.png',
                 link: '/products',
             },
             {
-                name: 'Kyrotisu',
-                image: '/valves.jpg',
-                link: '/products',
-            },
-            {
-                name: 'Extech',
-                image: '/pedestal-bearing.jpg',
-                link: '/products',
-            },
-            {
-                name: 'Metravi',
-                image: '/pedestal-bearing.jpg',
+                name: 'Kyoritsu',
+                image: '/kyoritsu.png',
                 link: '/products',
             },
             {
                 name: 'Testo',
-                image: '/pedestal-bearing.jpg',
+                image: '/testo.png',
                 link: '/products',
             }
         ],
@@ -124,8 +112,6 @@ export default function ProductsSection() {
                         >
 
                             <h4>{item.category}</h4>
-
-                            <p>{item.description}</p>
 
                         </button>
 

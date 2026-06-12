@@ -1,18 +1,12 @@
-import styles from '@/styles/products/ProductSidebar.module.css';
-
-type Group = {
-  title: string;
-  slug: string;
-};
+import styles from "@/styles/products/ProductSidebar.module.css";
+import { productOrganizations } from "@/data/productsData";
 
 type Props = {
-  groups: Group[];
   activeCategory: string;
   setActiveCategory: (slug: string) => void;
 };
 
 export default function ProductSidebar({
-  groups,
   activeCategory,
   setActiveCategory
 }: Props) {
@@ -21,26 +15,74 @@ export default function ProductSidebar({
 
     <aside className={styles.sidebar}>
 
-      <span>
-        PRODUCT CATEGORIES
-      </span>
+      <div className={styles.sidebarInner}>
 
-      {groups.map((group) => (
+        <span className={styles.heading}>
+          PRODUCT CATEGORIES
+        </span>
 
-        <button
-          key={group.slug}
-          className={
-            activeCategory === group.slug
-              ? styles.active
-              : ''
-          }
-          onClick={() => setActiveCategory(group.slug)}
-        >
-          {group.title}
-        </button>
+        {productOrganizations.map((organization) => (
 
-      ))}
+          <div
+            key={organization.slug}
+            className={styles.organizationCard}
+          >
+
+            <div className={styles.organizationTop}>
+
+              <div className={styles.organizationBadge}>
+                {organization.organization.charAt(0)}
+              </div>
+
+              <div>
+
+                <h3>
+                  {organization.organization}
+                </h3>
+
+                <p>
+                  {organization.description}
+                </p>
+
+              </div>
+
+            </div>
+
+            <div className={styles.groupList}>
+
+              {organization.groups.map((group) => (
+
+                <button
+                  key={group.slug}
+                  className={
+                    activeCategory === group.slug
+                      ? styles.active
+                      : styles.categoryButton
+                  }
+                  onClick={() => setActiveCategory(group.slug)}
+                >
+
+                  <span>
+                    {group.title}
+                  </span>
+
+                  <small>
+                    {group.products.length}
+                  </small>
+
+                </button>
+
+              ))}
+
+            </div>
+
+          </div>
+
+        ))}
+
+      </div>
 
     </aside>
+
   );
 }

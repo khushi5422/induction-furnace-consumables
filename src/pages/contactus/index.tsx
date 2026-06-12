@@ -10,7 +10,6 @@ import ContactMap from '@/components/contact/ContactMap';
 
 import CTASection from '@/components/about/CTASection';
 
-import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 
 export default function ContactUs() {
 
@@ -30,7 +29,7 @@ export default function ContactUs() {
 
       </Head>
 
-      <ContactHero />
+      {/* <ContactHero /> */}
 
       <ContactCards />
 
@@ -39,9 +38,6 @@ export default function ContactUs() {
       <ContactMap />
 
       <CTASection />
-
-      <FloatingWhatsApp />
-
     </>
   );
 }

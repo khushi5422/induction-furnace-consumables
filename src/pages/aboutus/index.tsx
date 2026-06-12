@@ -6,7 +6,6 @@ import StatsSection from '@/components/about/StatsSection';
 import GroupCompanies from '@/components/about/GroupCompanies';
 import VisionMission from '@/components/about/VisionMission';
 import WhyChooseUs from '@/components/about/WhyChooseUs';
-import Infrastructure from '@/components/about/Infrastructure';
 import Leadership from '@/components/about/Leadership';
 import CTASection from '@/components/about/CTASection';
 
@@ -37,8 +36,6 @@ export default function AboutUs() {
         <VisionMission />
 
         <WhyChooseUs />
-
-       {/* <Infrastructure /> */}
 
         <Leadership />
 

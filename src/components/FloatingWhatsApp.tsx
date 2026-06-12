@@ -7,7 +7,7 @@ export default function FloatingWhatsApp() {
   return (
 
     <a
-      href="https://wa.me/919898997644"
+      href="https://wa.me/919898997644?text=Hello%20Fieldman%20Group%20Companies"
       target="_blank"
       rel="noopener noreferrer"
       className={styles.whatsapp}

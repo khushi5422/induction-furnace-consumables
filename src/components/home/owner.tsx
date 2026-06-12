@@ -65,7 +65,7 @@ export default function Owner() {
         <div className={styles.ownerImageWrapper}>
 
           <Image
-            src="/owner.jpg"
+            src="/owner.JPG"
             width={70}
             height={70}
             alt="Owner"

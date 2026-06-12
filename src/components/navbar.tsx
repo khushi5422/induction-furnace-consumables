@@ -98,7 +98,7 @@ const Navigationbar = () => {
                           <div className={Home.productGroup} key={group.slug}>
                             {/* CATEGORY TITLE */}
                             <Link
-                              href={`/products/category/${group.slug}`}
+                              href={`/products/${group.slug}`}
                               className={Home.productMainLink}
                               onClick={closeProductsMenu}
                             >
@@ -122,7 +122,7 @@ const Navigationbar = () => {
 
                             {/* VIEW ALL */}
                             <Link
-                              href={`/products/category/${group.slug}`}
+                              href={`/products/${group.slug}`}
                               className={Home.viewAllProducts}
                               onClick={closeProductsMenu}
                             >

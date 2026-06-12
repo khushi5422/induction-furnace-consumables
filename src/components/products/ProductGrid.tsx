@@ -1,13 +1,8 @@
-import ProductCard from './ProductCard';
+import ProductCard from "./ProductCard";
 
-import styles from '@/styles/products/ProductGrid.module.css';
+import styles from "@/styles/products/ProductGrid.module.css";
 
-type Product = {
-  name: string;
-  slug: string;
-  image: string;
-  shortDescription: string;
-};
+import { Product } from "@/data/productsData";
 
 type Props = {
   products: Product[];
@@ -31,5 +26,6 @@ export default function ProductGrid({
       ))}
 
     </div>
+
   );
 }
