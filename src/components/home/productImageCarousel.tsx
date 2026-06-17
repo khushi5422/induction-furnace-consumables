@@ -6,11 +6,11 @@ const images = [
   '/steel-furnace-coil.png',
   '/refractory-top-cast-ring-set.png',
   '/fieldman-sensor.png',
-  '/permali-frp-coil-support.png',
+  '/fieldman-induction.png',
   '/furnace-top-cast.png',
   '/small-furnace-coil.png',
   '/steel-melting-furnace-assembly.png',
-  '/aluminum-side-plates.png',
+  '/motors-gear-coupling -chain.png',
 ];
 
 export default function ProductImageCarousel() {

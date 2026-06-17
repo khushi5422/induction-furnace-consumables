@@ -71,7 +71,7 @@ export default function ContactDirectory() {
         </span>
 
         <h2>
-          Connect with the right Fieldman organization
+          Connect With The Best Fieldman organization
         </h2>
 
       </div>
