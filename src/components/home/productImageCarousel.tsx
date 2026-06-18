@@ -1,6 +1,7 @@
 'use client';
 
 import styles from "@/styles/home/productimagecarousel.module.css";
+import Image from "next/image";
 
 const images = [
   '/steel-furnace-coil.png',
@@ -53,9 +54,10 @@ export default function ProductImageCarousel() {
 
               <div className={styles.imageCard}>
 
-                <img
+                <Image
                   src={image}
                   alt={`slide-${index}`}
+                  fill
                   className={styles.image}
                 />
 

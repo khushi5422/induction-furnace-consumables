@@ -1,17 +1,12 @@
-import Link from 'next/link';
+import { useRouter } from "next/router";
+
 import { Product } from "@/data/productsData";
-import styles from '@/styles/products/ProductCard.module.css';
 
-// type ProductProps = {
+import Image from "next/image";
 
-//   product: {
-//     name: string;
-//     slug: string;
-//     image: string;
-//     shortDescription: string;
-//   };
-// };
- type Props = {
+import styles from "@/styles/products/ProductCard.module.css";
+
+type Props = {
   product: Product;
 };
 
@@ -19,15 +14,24 @@ export default function ProductCard({
   product
 }: Props) {
 
+  const router = useRouter();
+
   return (
 
-    <div className={styles.card}>
+    <article
+      className={styles.card}
+      onClick={() =>
+        router.push(`/products/${product.slug}`)
+      }
+      role="button"
+    >
 
       <div className={styles.imageWrap}>
 
-        <img
+        <Image
           src={product.image}
           alt={product.name}
+          fill
           className={styles.image}
         />
 
@@ -45,24 +49,28 @@ export default function ProductCard({
 
         <div className={styles.actions}>
 
-          <Link
-            href={`/products/${product.slug}`}
-            className={styles.primaryBtn}
-          >
+          <span className={styles.primaryBtn}>
             View More
-          </Link>
+          </span>
 
-          <Link
-            href={`/contact?product=${product.name}`}
+          <button
             className={styles.secondaryBtn}
+            onClick={(e) => {
+
+              e.stopPropagation();
+
+              router.push("/contactus");
+
+            }}
           >
             Inquiry
-          </Link>
+          </button>
 
         </div>
 
       </div>
 
-    </div>
+    </article>
+
   );
 }

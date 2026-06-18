@@ -34,8 +34,19 @@
 
   color: #ff1400 !important;
 }
+
 .navContainer {
-  padding: 0 48px;
+  width: min(1320px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  min-height: 76px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
 }
 
 .logoWrapper {
@@ -43,20 +54,34 @@
   align-items: center;
 }
 
+.navlogoWrap {
+  position: relative;
+
+  width: 190px;
+
+  height: 58px;
+
+  flex-shrink: 0;
+}
+
 .navlogo {
-  width: 132px;
-  max-height: 64px;
-  height: auto;
   object-fit: contain;
 }
 
-.navCollapse {
+/* .navCollapse {
   justify-content: flex-end;
-}
+} */
 
 .centerNav {
+  display: flex;
+
   align-items: center;
+
+  justify-content: flex-end;
+
   gap: 8px;
+
+  margin-left: auto;
 }
 
 .navLink {
@@ -73,7 +98,75 @@
   background: #fff1ef;
 }
 
-.navDropdown :global(.dropdown-toggle) {
+.dropdownWrapper {
+  position: relative;
+}
+
+.dropdownButton {
+  border: 0;
+
+  background: transparent;
+
+  color: #111827;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  padding: 10px 16px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.dropdownButton:hover {
+  color: #b90f00;
+
+  background: #fff1ef;
+}
+
+.dropdownWrapper {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  height: 76px;
+}
+
+.mobileToggle {
+  display: none;
+}
+
+.dropdownMenu {
+  position: absolute;
+
+  top: 76px;
+
+  left: 50%;
+
+  width: min(1120px, calc(100vw - 32px));
+
+  transform: translateX(-50%);
+
+  border: 1px solid #e8edf2;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  background: #fff;
+
+  box-shadow: 0 28px 70px rgba(15, 23, 42, 0.18);
+
+  z-index: 1000;
+}
+
+/* .navDropdown :global(.dropdown-toggle) {
   color: #111827 !important;
   font-size: 15px;
   font-weight: 600;
@@ -101,7 +194,7 @@
   background: #fff;
   box-shadow: 0 28px 70px rgba(15, 23, 42, 0.18);
   transform: translateX(-50%) !important;
-}
+} */
 
 .megaMenu {
   display: grid;
@@ -256,14 +349,51 @@
     padding: 0 20px;
   }
 
+  .mobileToggle {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 44px;
+
+    height: 44px;
+
+    border: 1px solid #e8edf2;
+
+    border-radius: 10px;
+
+    background: white;
+
+    cursor: pointer;
+
+    font-size: 22px;
+  }
+
   .navlogo {
     width: 118px;
     max-height: 56px;
   }
 
   .centerNav {
+    position: absolute;
+
+    top: 76px;
+
+    left: 0;
+
+    width: 100%;
+
+    background: white;
+
+    flex-direction: column;
+
     align-items: stretch;
-    padding: 16px 0;
+
+    padding: 20px;
+
+    border-top: 1px solid #edf1f5;
   }
 
   .quoteButton {

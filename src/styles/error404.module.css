@@ -120,11 +120,23 @@
   position: relative;
 }
 
-.errorImage {
+.errorImageWrap {
+  position: relative;
+
   width: 100%;
-  max-width: 760px;
+
+  min-height: 520px;
+}
+
+.errorImage {
   object-fit: contain;
-  animation: float 5s ease-in-out infinite;
+}
+@media (max-width: 768px) {
+
+  .errorImageWrap {
+    min-height: 320px;
+  }
+
 }
 
 /* FOOTER */

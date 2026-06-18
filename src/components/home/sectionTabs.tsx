@@ -4,6 +4,7 @@ import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
+import Image from "next/image";
 import ConstructionIcon from '@mui/icons-material/Construction';
 import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
 import EngineeringIcon from '@mui/icons-material/Engineering';
@@ -71,9 +72,10 @@ export default function SectionTabs() {
     <div className={styles.heroSection}>
 
       {/* BACKGROUND IMAGE */}
-      <img
+      <Image
         src={tabData[value].image}
         alt="Industry"
+        fill
         className={styles.backgroundImage}
       />
 

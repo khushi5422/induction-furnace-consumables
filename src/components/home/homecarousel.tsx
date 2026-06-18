@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import Link from "next/link";
+import Image from "next/image";
 import Home from '@/styles/home/homecarousel.module.css'
 
 const Homecarousel = () => {
@@ -30,7 +31,7 @@ const Homecarousel = () => {
       description:
         "Manufacturing and export support for refractory components, furnace spares and allied industrial products.",
     },
-    
+
   ];
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const handleImageChange = (index: React.SetStateAction<number>) => {
@@ -52,7 +53,13 @@ const Homecarousel = () => {
       swipeScrollTolerance={80}>
       {images.map((image, index) => (
         <div key={index} className={Home.heroSlide}>
-          <img src={image.src} alt={image.heading} className={Home.carouselhei} loading={index === 0 ? "eager" : "lazy"} />
+          <Image
+            src={`/${image.src}`}
+            alt={image.heading}
+            fill
+            priority={index === 0}
+            className={Home.carouselhei}
+          />
           <div className={Home.heroOverlay}></div>
           <div
             className={`${Home.heroContent} ${index === selectedImageIndex ? Home.heroContentActive : ""}`}

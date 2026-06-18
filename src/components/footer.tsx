@@ -1,5 +1,5 @@
 import Link from 'next/link';
-
+import Image from "next/image";
 import {
   FaMapMarkerAlt,
   FaPhoneAlt,
@@ -25,11 +25,16 @@ export default function Footer() {
 
         <div className={styles.footerColumn}>
 
-          <img
-            src="/logo.svg"
-            alt="Logo"
-            className={styles.footerLogo}
-          />
+          <div className={styles.footerLogoWrap}>
+
+            <Image
+              src="/logo.svg"
+              alt="Logo"
+              fill
+              className={styles.footerLogo}
+            />
+
+          </div>
 
           {/* <p className={styles.footerDescription}>
             Delivering advanced induction furnace
@@ -64,7 +69,7 @@ export default function Footer() {
             </Link>
 
             <Link href="/products">
-              Meauring Instruments Temperature Tips 
+              Meauring Instruments Temperature Tips
             </Link>
             <Link href="/products">
               Refractory Manufacturing

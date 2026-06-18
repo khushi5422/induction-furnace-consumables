@@ -1,4 +1,5 @@
 import styles from '@/styles/aboutus/GroupCompanies.module.css';
+import Image from "next/image";
 
 const companies = [
   {
@@ -43,11 +44,16 @@ export default function GroupCompanies() {
             key={index}
             className={styles.card}
           >
+            <div className={styles.imageWrapper}>
 
-            <img
-              src={company.image}
-              alt={company.title}
-            />
+              <Image
+                src={company.image}
+                alt={company.title}
+                fill
+                className={styles.companyImage}
+              />
+
+            </div>
 
             <div className={styles.content}>
 

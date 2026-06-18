@@ -73,7 +73,7 @@
 
 .companyImageWrap {
   position: relative;
-
+  object-fit: cover;
   height: 290px;
 
   overflow: hidden;

@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 import Link from 'next/link';
-
+import Image from "next/image";
 import { productOrganizations } from '@/data/productsData';
 
 import RelatedProducts from '@/components/products/RelatedProducts';
@@ -51,9 +51,10 @@ export default function ProductDetailsPage() {
 
             <div className={styles.imageWrap}>
 
-              <img
+              <Image
                 src={product.image}
                 alt={product.name}
+                fill
                 className={styles.image}
               />
 

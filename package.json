@@ -1,12 +1,13 @@
 {
-  "name": "kdsinternationals",
+  "name": "fieldmaninduction",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -19,7 +20,7 @@
     "@mui/material": "^9.0.1",
     "@nextui-org/accordion": "^2.0.28",
     "aos": "^2.3.4",
-    "bootstrap": "^5.3.2",
+    "bootstrap": "^5.3.8",
     "emailjs": "^4.0.3",
     "emailjs-com": "^3.2.0",
     "embla-carousel": "^8.0.0-rc18",
@@ -28,8 +29,9 @@
     "mongodb": "^6.3.0",
     "mui": "^0.0.1",
     "next": "14.0.3",
+    "next-sitemap": "^4.2.3",
     "react": "^18",
-    "react-bootstrap": "^2.9.1",
+    "react-bootstrap": "^2.10.10",
     "react-countup": "^6.5.3",
     "react-dom": "^18",
     "react-icons": "^4.12.0",

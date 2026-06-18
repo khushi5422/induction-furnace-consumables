@@ -42,13 +42,20 @@
 
 /* LOGO */
 
-.footerLogo {
-  width: 180px;
+.footerLogoWrap {
+  position: relative;
 
-  margin-bottom: 24px;
+  width: 81px;
+  height: 70px;
+
+  height: 60px;
 }
 
-/* DESCRIPTION */
+.footerLogo {
+  object-fit: contain;
+}
+
+/* DESCRIPTION
 
 .footerDescription {
   font-size: 16px;
@@ -60,7 +67,7 @@
   margin-bottom: 24px;
 
   max-width: 320px;
-}
+} */
 
 /* COMPANY LIST */
 
@@ -73,7 +80,7 @@
 }
 
 .companyList span {
-  color: rgba(255,255,255,0.82);
+  color: rgba(255, 255, 255, 0.82);
 
   font-size: 15px;
 }
@@ -89,7 +96,7 @@
 }
 
 .footerLinks a {
-  color: rgba(255,255,255,0.72);
+  color: rgba(255, 255, 255, 0.72);
 
   text-decoration: none;
 
@@ -128,7 +135,7 @@
 
   border-radius: 12px;
 
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
 
   display: flex;
 
@@ -150,7 +157,7 @@
 /* BOTTOM BAR */
 
 .bottomBar {
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 
   padding: 22px 20px;
 
@@ -160,7 +167,7 @@
 .bottomBar p {
   margin: 0;
 
-  color: rgba(255,255,255,0.65);
+  color: rgba(255, 255, 255, 0.65);
 
   font-size: 14px;
 }
@@ -168,17 +175,14 @@
 /* RESPONSIVE */
 
 @media (max-width: 992px) {
-
   .footerContainer {
-    grid-template-columns:
-      repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
     gap: 40px;
   }
 }
 
 @media (max-width: 768px) {
-
   .footer {
     padding-top: 60px;
   }

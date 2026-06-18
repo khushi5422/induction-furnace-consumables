@@ -1,1 +1,1 @@
-This is Demo Website for spice exporting comapnay.
+Manufacturer of Induction Furnace Spares & Exporter

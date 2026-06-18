@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from "next/image";
 import { Container } from 'react-bootstrap';
 import Home from '@/styles/home/groupsection.module.css'
 
@@ -28,7 +29,7 @@ const groupCompanies = [
 
 const GroupSection = () => {
   return (
-    <section id="about-us" className="mt-5 mb-5"> 
+    <section id="about-us" className="mt-5 mb-5">
 
       <Container className={Home.groupSection}>
         <div className={Home.groupHeading}>
@@ -47,11 +48,11 @@ const GroupSection = () => {
               data-aos-once="true"
             >
               <div className={Home.companyImageWrap}>
-                <img
-                  src={company.image}
+                <Image
+                  src={`${company.image}`}
                   alt={company.title}
+                  fill
                   className={Home.companyImage}
-                  loading="lazy"
                 />
               </div>
 
