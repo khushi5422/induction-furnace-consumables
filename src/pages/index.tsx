@@ -21,7 +21,6 @@ export default function Home() {
       <GroupSection /> 
       {/* Global Clients  */}
       <ProductImageCarousel /> 
-      {/* Images CHnage  */}
       <SectionTab />
       <ProductsSection />
       <Owner />

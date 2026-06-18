@@ -3,6 +3,10 @@ body {
   overflow-x: hidden;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
 }
@@ -81,14 +85,28 @@ header {
 
 #globalLoader {
   position: fixed;
-  z-index: 9999;
-  top: 50%;
-  left: 50%;
-  background-color: #fff;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  height: 50%;
-  justify-content: center;
-  align-items: center;
+
+  inset: 0;
+
+  background: #ffffff;
+
+  z-index: 99999;
+
   display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.loaderImageWrap {
+  position: relative;
+
+  width: 120px;
+
+  height: 120px;
+}
+
+.loaderImage {
+  object-fit: contain;
 }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
+import Image from "next/image";
 import styles from "@/styles/error404.module.css";
 import { FaArrowLeft, FaHome } from "react-icons/fa";
 import { HiOutlineViewGrid } from "react-icons/hi";
@@ -56,12 +57,20 @@ export default function Custom404() {
           {/* RIGHT */}
 
           <div className={styles.rightContent}>
-            <img
-              src="/error.png"
-              alt="404 Illustration"
-              className={styles.errorImage}
-            />
-          </div>
+
+  <div className={styles.errorImageWrap}>
+
+    <Image
+      src="/error.png"
+      alt="404 Illustration"
+      fill
+      priority
+      className={styles.errorImage}
+    />
+
+  </div>
+
+</div>
         </div>
 
         {/* FOOTER */}

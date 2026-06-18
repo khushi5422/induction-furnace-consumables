@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import Image from "next/image";
 import Home from '@/styles/home/aboutus.module.css'
 
 // const groupCompanies = [
@@ -28,78 +28,87 @@ import Home from '@/styles/home/aboutus.module.css'
 
 const AboutUs = () => {
   return (
-    <section id="about-us" className="mt-5 mb-5">
 
-      <Container className={Home.aboutSection}>
+  <section
+    id="about-us"
+    className={Home.aboutSectionWrapper}
+  >
 
-        <Row className={Home.aboutRow}>
+    <div className={Home.aboutContainer}>
 
-          {/* LEFT SIDE */}
+      <div className={Home.aboutGrid}>
 
-          <Col lg={6} md={12}>
+        {/* LEFT SIDE */}
 
-            <div className={Home.aboutImageWrapper}>
+        <div className={Home.leftSide}>
 
-              <img
-                src="/AboutCompany.jpeg"
-                alt="About Us"
-                className={Home.aboutImage}
-                loading="lazy"
-              />
+          <div className={Home.aboutImageWrapper}>
 
-            </div>
+            <Image
+              src="/AboutCompany.jpeg"
+              alt="About Us"
+              fill
+              priority
+              className={Home.aboutImage}
+            />
 
-          </Col>
+          </div>
 
-          {/* RIGHT SIDE */}
+        </div>
 
-          <Col lg={6} md={12}>
+        {/* RIGHT SIDE */}
 
-            <div className={Home.aboutContent}>
+        <div className={Home.rightSide}>
 
-              <span className={Home.aboutTag}>
-                ABOUT COMPANY
-              </span>
+          <div className={Home.aboutContent}>
 
-              <h2 className={Home.aboutTitle}>
-                Precision Engineering, Smarter Solutions Since 2005
-              </h2>
+            <span className={Home.aboutTag}>
+              ABOUT COMPANY
+            </span>
 
-              <p className={Home.aboutText}>
+            <h2 className={Home.aboutTitle}>
+              Precision Engineering, Smarter Solutions Since 2005
+            </h2>
 
-                Your trusted partner for end-to-end industrial solutions built for the steel industry
-                <b> Fieldman Induction </b>
-                Fieldman Induction which was formed in the year 2005
+            <p className={Home.aboutText}>
 
-                <br /><br />
+              Your trusted partner for end-to-end industrial solutions built for the steel industry
+              <b> Fieldman Induction </b>
+              Fieldman Induction which was formed in the year 2005
 
-                We are a proud manufacturer, supplier and exporter of
-                products like
-                <b>
-                  {' '}Induction Furnace Coil,
-                  Furnace Assembly,
-                  Refractory Top Cast & Bottom Cast,
-                  Hydraulic Power Pack,
-                  Heating Furnace Spares
-                </b>
-                and many more.
+              <br /><br />
 
-                <br /><br />
+              We are a proud manufacturer, supplier and exporter of
+              products like
 
-                Our products are widely used in
-                steel, petrochemical, glass,
-                aerospace and plastic industries.
+              <b>
+                {' '}Induction Furnace Coil,
+                Furnace Assembly,
+                Refractory Top Cast & Bottom Cast,
+                Hydraulic Power Pack,
+                Heating Furnace Spares
+              </b>
 
-              </p>
+              and many more.
 
-            </div>
+              <br /><br />
 
-          </Col>
+              Our products are widely used in
+              steel, petrochemical, glass,
+              aerospace and plastic industries.
 
-        </Row>
+            </p>
 
-      </Container>  
-    </section>
-  );
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+);
 };
 export default AboutUs;

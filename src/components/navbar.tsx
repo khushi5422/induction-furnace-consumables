@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import React, { useState } from "react";
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import Home from '@/styles/navbar.module.css'
 import { productOrganizations } from "@/data/productsData";
 
@@ -12,65 +12,87 @@ const Navigationbar = () => {
   };
 
   return (
-    <>
-      <Navbar
-        expand="lg"
-        className={Home.customNavbar}
-      >
 
-        <Container fluid className={Home.navContainer}>
+    <header className={Home.customNavbar}>
 
-          {/* LOGO */}
+      <div className={Home.navContainer}>
 
-          <Navbar.Brand href="/" className={Home.logoWrapper}>
-            <img
+        {/* LOGO */}
+
+        <Link href="/" className={Home.logoWrapper}>
+
+          <div className={Home.navlogoWrap}>
+
+            <Image
               src="/logo.svg"
               alt="Logo"
+              fill
+              priority
               className={Home.navlogo}
-              loading="lazy"
             />
-          </Navbar.Brand>
 
-          {/* MOBILE TOGGLE */}
+          </div>
 
-          <Navbar.Toggle
-            aria-controls="navbar-nav"
-            className={Home.mobileToggle}
-          />
+        </Link>
 
-          {/* NAV ITEMS */}
+        {/* MOBILE BUTTON */}
 
-          <Navbar.Collapse
-            id="navbar-nav"
-            className={Home.navCollapse}
+        <button
+          className={Home.mobileToggle}
+          onClick={() => setIsProductsOpen(!isProductsOpen)}
+        >
+          ☰
+        </button>
+
+        {/* NAVIGATION */}
+
+        <nav className={Home.centerNav}>
+
+          <Link href="/" className={Home.navLink}>
+            Home
+          </Link>
+
+          <Link href="/aboutus" className={Home.navLink}>
+            About
+          </Link>
+
+          {/* PRODUCTS */}
+
+          <div
+            className={Home.dropdownWrapper}
+            onMouseEnter={() => setIsProductsOpen(true)}
+            onMouseLeave={() => {
+              setTimeout(() => {
+                setIsProductsOpen(false);
+              }, 150);
+            }}
           >
 
-            <Nav className={Home.centerNav}>
+            <button className={Home.dropdownButton}>
+              Products
+            </button>
 
-              <Nav.Link href="/" className={Home.navLink}>
-                Home
-              </Nav.Link>
+            {isProductsOpen && (
 
-              <Nav.Link href="/aboutus" className={Home.navLink}>
-                About
-              </Nav.Link>
+              <div className={Home.dropdownMenu}>
 
-              <NavDropdown
-                title="Products"
-                id="collapsible-nav-dropdown"
-                className={Home.navDropdown}
-                renderMenuOnMount
-                show={isProductsOpen}
-                onToggle={(isOpen) => setIsProductsOpen(isOpen)}
-              >
                 <div className={Home.megaMenu}>
+
                   <div className={Home.megaIntro}>
-                    <span className={Home.megaEyebrow}>PRODUCT RANGE</span>
-                    <h3>Explore by organization</h3>
+
+                    <span className={Home.megaEyebrow}>
+                      PRODUCT RANGE
+                    </span>
+
+                    <h3>
+                      Explore by organization
+                    </h3>
+
                     <p>
-                      Browse our major product lines across induction, sensors, automation and
-                      industrial materials.
+                      Browse our major product lines across induction,
+                      sensors, automation and industrial materials.
                     </p>
+
                     <Link
                       href="/products"
                       className={Home.megaCta}
@@ -78,25 +100,37 @@ const Navigationbar = () => {
                     >
                       View all products
                     </Link>
+
                   </div>
 
                   <div className={Home.megaGrid}>
-                    {productOrganizations.map((organization, orgIndex) => (
-                      <div className={Home.megaColumn} key={organization.slug}>
-                        {/* ORGANIZATION HEADER */}
+
+                    {productOrganizations.map((organization) => (
+
+                      <div
+                        className={Home.megaColumn}
+                        key={organization.slug}
+                      >
+
                         <div className={Home.organizationHeader}>
-                          {/* <span>{String(orgIndex + 1).padStart(2, "0")}</span> */}
+
                           <div>
-                            <h4>{organization.organization}</h4>
-                            {/* <p>{organization.description}</p> */}
+
+                            <h4>
+                              {organization.organization}
+                            </h4>
+
                           </div>
+
                         </div>
 
-                        {/* CATEGORY + PRODUCTS */}
-                        {/* CHANGES MADE HERE: Added .slice(0, 3) to limit main categories to 3 */}
                         {organization.groups.slice(0, 3).map((group) => (
-                          <div className={Home.productGroup} key={group.slug}>
-                            {/* CATEGORY TITLE */}
+
+                          <div
+                            className={Home.productGroup}
+                            key={group.slug}
+                          >
+
                             <Link
                               href={`/products/${group.slug}`}
                               className={Home.productMainLink}
@@ -105,9 +139,10 @@ const Navigationbar = () => {
                               {group.title}
                             </Link>
 
-                            {/* PRODUCT NAMES */}
                             <div className={Home.subProductList}>
+
                               {group.products.slice(0, 2).map((product) => (
+
                                 <Link
                                   href={`/products/${product.slug}`}
                                   key={product.slug}
@@ -115,12 +150,15 @@ const Navigationbar = () => {
                                   onClick={closeProductsMenu}
                                 >
                                   <span className={Home.productDot}></span>
+
                                   {product.name}
+
                                 </Link>
+
                               ))}
+
                             </div>
 
-                            {/* VIEW ALL */}
                             <Link
                               href={`/products/${group.slug}`}
                               className={Home.viewAllProducts}
@@ -128,38 +166,46 @@ const Navigationbar = () => {
                             >
                               View All →
                             </Link>
+
                           </div>
+
                         ))}
+
                       </div>
+
                     ))}
+
                   </div>
+
                 </div>
-              </NavDropdown>
 
-              {/* <Nav.Link href="/industries" className={Home.navLink}>
-                Industries We Serve
-              </Nav.Link> */}
+              </div>
 
-              <Nav.Link href="/contactus" className={Home.navLink}>
-                Contact
-              </Nav.Link>
+            )}
 
-              <Nav.Link href="/faq" className={Home.navLink}>
-                FAQ
-              </Nav.Link>
+          </div>
 
-              <Nav.Link href="/contactus" className={Home.quoteButton}>
-                Get Quote
-              </Nav.Link>
+          <Link href="/contactus" className={Home.navLink}>
+            Contact
+          </Link>
 
-            </Nav>
+          <Link href="/faq" className={Home.navLink}>
+            FAQ
+          </Link>
 
-          </Navbar.Collapse>
+          <Link
+            href="/contactus"
+            className={Home.quoteButton}
+          >
+            Get Quote
+          </Link>
 
-        </Container>
+        </nav>
 
-      </Navbar>
-    </>
+      </div>
+
+    </header>
+
   );
 };
 

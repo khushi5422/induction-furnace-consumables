@@ -1,2 +1,9 @@
-User-agent : *
-Disallow : 
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://fieldman-group-of-comapnies.vercel.app
+
+# Sitemaps
+Sitemap: https://fieldman-group-of-comapnies.vercel.app/sitemap.xml

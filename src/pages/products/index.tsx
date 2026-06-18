@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-
+import Image from "next/image";
 import { productOrganizations } from "@/data/productsData";
 
 import styles from "@/styles/products/ProductsPage.module.css";
@@ -162,15 +162,19 @@ export default function ProductsPage() {
             <article
               key={product.slug}
               className={styles.productCard}
+              onClick={() =>
+                window.location.href = `/products/${product.slug}`
+              }
             >
 
               <div className={styles.productImageWrap}>
 
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className={styles.productImage}
-                />
+                <Image
+    src={product.image}
+    alt={product.name}
+    fill
+    className={styles.productImage}
+  />
 
               </div>
 
@@ -207,6 +211,7 @@ export default function ProductsPage() {
                   <Link
                     href={`/products/${product.slug}`}
                     className={styles.primaryBtn}
+                    onClick={(e) => e.stopPropagation()}
                   >
                     View More
                   </Link>
@@ -214,6 +219,7 @@ export default function ProductsPage() {
                   <Link
                     href="/contactus"
                     className={styles.secondaryBtn}
+                    onClick={(e) => e.stopPropagation()}
                   >
                     Inquiry
                   </Link>

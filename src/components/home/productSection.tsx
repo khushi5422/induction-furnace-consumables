@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-
+import Image from "next/image";
 import Product from '@/styles/home/productsSection.module.css';
 
 const productCategories = [
@@ -41,7 +41,7 @@ const productCategories = [
                 name: 'Measuring Instruments',
                 image: '/measuring-instruments-lance-receptacle.png',
                 link: '/products',
-            },{
+            }, {
                 name: 'Powder Refractories Manufacturer',
                 image: '/home-powder-refractories.png',
                 link: '/products',
@@ -134,9 +134,10 @@ export default function ProductsSection() {
                             >
 
                                 <div className={Product.imageWrapper}>
-                                    <img
+                                    <Image
                                         src={product.image}
                                         alt={product.name}
+                                        fill
                                         className={Product.productImage}
                                     />
                                 </div>
