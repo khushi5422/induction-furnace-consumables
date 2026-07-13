@@ -13,25 +13,34 @@ export default function Layout({ children }: LayoutProps) {
     <>
       <style jsx>{`
         .maiin {
-          display: grid;
-          grid-template-areas:
-            "head head head"
-            "content content content"
-            "foot foot foot";
-          grid-template-rows: 71px auto 20px;
-          min-height: 90vh;
-        }
+  display: grid;
+  grid-template-areas:
+    "head"
+    "content"
+    "foot";
+
+  grid-template-rows:
+    76px
+    1fr
+    auto;
+
+  min-height: 100vh;
+}
         .headeer {
-          grid-area: head;
-        }
-        .articlee {
-          grid-area: content;
-          position: relative;
-  z-index: 1;
-        }
-        .footeer {
-          grid-area: foot;
-        }
+  grid-area: head;
+  min-width: 0;
+}
+
+.articlee {
+  grid-area: content;
+  position: relative;
+  min-width: 0;
+}
+
+.footeer {
+  grid-area: foot;
+  min-width: 0;
+}
         @media (max-width: 768px) {
           .maiin {
             grid-template-rows: 65px auto 20px;

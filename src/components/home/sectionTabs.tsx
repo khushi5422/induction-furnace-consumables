@@ -11,11 +11,6 @@ import EngineeringIcon from '@mui/icons-material/Engineering';
 import styles from '@/styles/home/sectionTabs.module.css';
 import Link from 'next/link';
 
-interface TabPanelProps {
-  children?: React.ReactNode;
-  value: number;
-  index: number;
-}
 
 const tabData = [
   {
@@ -23,7 +18,7 @@ const tabData = [
     icon: <ConstructionIcon />,
     image: '/Banner 1.jpg',
     title:
-      'Electrotherm has supplied more than 6500 induction melting furnaces and completed over 40 turnkey projects.',
+      'Fieldman Induction has supplied more than 6500 induction melting furnaces and completed over 40 turnkey projects.',
     buttonText: 'Explore Iron & Steel Products',
     buttonLink: '/products',
   },

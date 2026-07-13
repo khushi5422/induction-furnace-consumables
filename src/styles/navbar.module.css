@@ -57,9 +57,9 @@
 .navlogoWrap {
   position: relative;
 
-  width: 190px;
+  width: 400px;
 
-  height: 58px;
+  height: 60px;
 
   flex-shrink: 0;
 }
