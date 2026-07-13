@@ -18,12 +18,12 @@ const productCategories = [
             {
                 name: 'Induction Furnace Coil',
                 image: '/home-steel-melting-coil.png',
-                link: '/products',
+                link: '/products/melting-furnace-coil',
             },
             {
                 name: 'Top Bottom Spares',
                 image: '/home-refractory-top.png',
-                link: '/products',
+                link: '/products/furnace-top-cast',
             }
         ],
     },
@@ -35,16 +35,16 @@ const productCategories = [
             {
                 name: 'Temperature Tips , Lollypop Sampler & Thermocouple',
                 image: '/fieldman-sensor.png',
-                link: '/products',
+                link: '/products/temperature-tips',
             },
             {
                 name: 'Measuring Instruments',
                 image: '/measuring-instruments-lance-receptacle.png',
-                link: '/products',
+                link: '/products/lance-receptacle',
             }, {
                 name: 'Powder Refractories Manufacturer',
                 image: '/home-powder-refractories.png',
-                link: '/products',
+                link: '/products/casting-powder',
             }
 
         ],
@@ -57,17 +57,17 @@ const productCategories = [
             {
                 name: 'Fluke',
                 image: '/fieldman-control-system.png',
-                link: '/products',
+                link: '/products/fluke-instruments',
             },
             {
                 name: 'Kyoritsu',
                 image: '/kyoritsu.png',
-                link: '/products',
+                link: '/products/kyoritsu-instruments',
             },
             {
                 name: 'Testo',
                 image: '/testo.png',
-                link: '/products',
+                link: '/products/testo-instruments',
             }
         ],
     },
@@ -131,6 +131,7 @@ export default function ProductsSection() {
                                 href={product.link}
                                 key={index}
                                 className={Product.productCard}
+                                scroll={true}
                             >
 
                                 <div className={Product.imageWrapper}>
@@ -156,6 +157,7 @@ export default function ProductsSection() {
                         <Link
                             href="/products"
                             className={Product.viewAllBtn}
+                            scroll={true}
                         >
                             View All Products
                         </Link>

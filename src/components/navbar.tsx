@@ -131,13 +131,13 @@ const Navigationbar = () => {
                             key={group.slug}
                           >
 
-                            <Link
-                              href={`/products/${group.slug}`}
+                            <div
+                            //  href={`/products/${group.slug}`}
                               className={Home.productMainLink}
-                              onClick={closeProductsMenu}
+                              // onClick={closeProductsMenu}
                             >
                               {group.title}
-                            </Link>
+                            </div>
 
                             <div className={Home.subProductList}>
 
@@ -160,7 +160,7 @@ const Navigationbar = () => {
                             </div>
 
                             <Link
-                              href={`/products/${group.slug}`}
+                              href={`/products`}
                               className={Home.viewAllProducts}
                               onClick={closeProductsMenu}
                             >

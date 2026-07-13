@@ -11,7 +11,7 @@ const images = [
   '/furnace-top-cast.png',
   '/small-furnace-coil.png',
   '/steel-melting-furnace-assembly.png',
-  '/motors-gear-coupling -chain.png',
+  '/mortar.png',
 ];
 
 export default function ProductImageCarousel() {
