@@ -1,6 +1,6 @@
 import Image from "next/image";
 import CountUp from "react-countup";
-import styles from "@/styles/home/GlobalPresence.module.css";
+import styles from "@/styles/home/globalpresence.module.css";
 
 const countries = [
   { name: "United Arab Emirates", code: "ae" },
