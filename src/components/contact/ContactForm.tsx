@@ -1,53 +1,183 @@
 'use client';
-
-import { useRef, useState } from 'react';
-
-import emailjs from '@emailjs/browser';
-
+import { useState } from 'react';
+import { sendWhatsAppInquiry } from "@/components/whatsapp";
+import { sendInquiryEmail } from "@/components/email";
 import styles from '@/styles/Contact.module.css';
 
 export default function ContactForm() {
-
-  const form = useRef<HTMLFormElement>(null);
 
   const [loading, setLoading] = useState(false);
 
   const [success, setSuccess] = useState('');
 
-  const sendEmail = async (
-    e: React.FormEvent<HTMLFormElement>
+  const [formData, setFormData] = useState({
+
+    user_name: "",
+    user_email: "",
+    user_phone: "",
+    user_company: "",
+    message: ""
+
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
 
-    e.preventDefault();
+    const {
+      name,
+      value
+    } = e.target;
 
-    if (!form.current) return;
 
-    try {
+    setFormData(prev => ({
 
-      setLoading(true);
+      ...prev,
+      [name]: value
 
-      await emailjs.sendForm(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
-        form.current,
-        'YOUR_PUBLIC_KEY'
-      );
+    }));
 
-      setSuccess('Your message has been sent successfully.');
-
-      form.current.reset();
-
-    } catch (error) {
-
-      setSuccess('Something went wrong. Please try again.');
-
-    } finally {
-
-      setLoading(false);
-    }
   };
 
+  const handleSubmit = async (
+  e: React.FormEvent<HTMLFormElement>
+) => {
+
+  e.preventDefault();
+
+
+  console.log("🚀 Contact Form Submitted");
+
+
+  console.log(
+    "📦 Contact Form Data:",
+    formData
+  );
+
+
+
+  if(
+    !formData.user_name ||
+    !formData.user_phone
+  ){
+
+    console.log(
+      "❌ Validation Failed",
+      {
+        name: formData.user_name,
+        phone: formData.user_phone
+      }
+    );
+
+
+    alert(
+      "Please fill name and phone number"
+    );
+
+    return;
+
+  }
+
+
+
+  try {
+
+
+    setLoading(true);
+
+
+    console.log(
+      "📧 Sending EmailJS..."
+    );
+
+
+
+    const emailResponse =
+      await sendInquiryEmail(formData);
+
+
+
+    console.log(
+      "✅ EmailJS Response:",
+      emailResponse
+    );
+
+
+
+    console.log(
+      "📱 Sending WhatsApp..."
+    );
+
+
+
+    sendWhatsAppInquiry(formData);
+
+
+
+    console.log(
+      "✅ WhatsApp function executed"
+    );
+
+
+
+    setSuccess(
+      "Thank you! We will contact you soon."
+    );
+
+
+
+    console.log(
+      "🧹 Resetting form..."
+    );
+
+
+
+    setFormData({
+
+      user_name:"",
+      user_email:"",
+      user_phone:"",
+      user_company:"",
+      message:""
+
+    });
+
+
+  }
+
+  catch(error){
+
+
+    console.error(
+      "❌ Contact Form Error:",
+      error
+    );
+
+
+    setSuccess(
+      "Something went wrong. Please try again."
+    );
+
+
+  }
+
+
+  finally{
+
+
+    console.log(
+      "🏁 Contact Form Process Finished"
+    );
+
+
+    setLoading(false);
+
+
+  }
+
+};
   return (
+
 
     <section className={styles.contactSection}>
 
@@ -91,8 +221,7 @@ export default function ContactForm() {
         <div className={styles.formWrap}>
 
           <form
-            ref={form}
-            onSubmit={sendEmail}
+            onSubmit={handleSubmit}
             className={styles.form}
           >
 
@@ -102,6 +231,8 @@ export default function ContactForm() {
                 type="text"
                 name="user_name"
                 placeholder="Your Name"
+                value={formData.user_name}
+                onChange={handleChange}
                 required
               />
 
@@ -109,6 +240,8 @@ export default function ContactForm() {
                 type="email"
                 name="user_email"
                 placeholder="Email Address"
+                value={formData.user_email}
+                onChange={handleChange}
                 required
               />
 
@@ -118,14 +251,18 @@ export default function ContactForm() {
 
               <input
                 type="text"
-                name="phone"
+                name="user_phone"
                 placeholder="Phone Number"
+                value={formData.user_phone}
+                onChange={handleChange}
               />
 
               <input
                 type="text"
-                name="company"
+                name="user_company"
                 placeholder="Company Name"
+                value={formData.user_company}
+                onChange={handleChange}
               />
 
             </div>
@@ -134,6 +271,8 @@ export default function ContactForm() {
               name="message"
               placeholder="Write your message..."
               rows={6}
+              value={formData.message}
+              onChange={handleChange}
               required
             />
 
