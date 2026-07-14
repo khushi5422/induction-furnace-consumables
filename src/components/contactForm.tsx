@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
 import { useState } from "react";
 import { IoClose, IoMailOutline } from "react-icons/io5";
-// import emailjs from "@emailjs/browser";
+import { sendWhatsAppInquiry } from "./whatsapp";
+import { sendInquiryEmail } from "./email";
 
 interface FormData {
   user_name: string;
@@ -35,44 +36,90 @@ const Inquiry = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+ const handleSubmit = async (
+  e: React.FormEvent<HTMLFormElement>
+) => {
 
-    try {
-      const response = await fetch("/api/dataSaver", {
-        method: "POST",
-        body: JSON.stringify(formData),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+  e.preventDefault();
 
-      const data = await response.json();
-      console.log("Data sent to database:", data);
-    } catch (error) {
-      console.error("Error sending data to database:", error);
-    }
-//EMAIL JS
-    // if (form.current) {
-    //   emailjs
-    //     .sendForm(
-    //       "service_te7i92q",
-    //       "template_iopy4qn",
-    //       form.current,
-    //       "KunU0tXpaWQjLQJX4"
-    //     )
-    //     .then(
-    //       (result) => {
-    //         console.log(result.text);
-    //         console.log("Message sent successfully");
-    //       },
-    //       (error) => {
-    //         console.log(error.text);
-    //         console.log("Error sending message");
-    //       }
-    //     );
-    // }
-  };
+
+  console.log("📝 Form Submitted");
+
+  console.log("Form Data:", formData);
+
+
+
+  if(
+    !formData.user_name ||
+    !formData.user_phone
+  ){
+
+    console.log("❌ Validation Failed");
+
+    alert("Please enter name and phone number");
+
+    return;
+
+  }
+
+  try {
+
+
+    console.log("📧 Sending EmailJS...");
+
+
+    const emailResponse = await sendInquiryEmail(formData);
+
+
+    console.log(
+      "✅ EmailJS Success:",
+      emailResponse
+    );
+
+
+
+    console.log(
+      "📱 Opening WhatsApp..."
+    );
+
+
+    sendWhatsAppInquiry(formData);
+
+
+
+    console.log(
+      "✅ WhatsApp Function Called"
+    );
+
+
+
+    setFormData({
+
+      user_name:"",
+      user_company:"",
+      user_email:"",
+      user_phone:"",
+      message:"",
+
+    });
+
+
+
+  }
+
+  catch(error){
+
+
+    console.log(
+      "❌ Inquiry Error:",
+      error
+    );
+
+
+  }
+
+
+};
 
   return (
     <>
@@ -266,7 +313,10 @@ const Inquiry = () => {
               value={formData.message}
               onChange={handleInputChange}
             ></textarea>
-            <input type="submit" value="Send" />
+            <input
+              type="submit"
+              value="Send Inquiry"
+            />
           </form>
         </div>
       </div>

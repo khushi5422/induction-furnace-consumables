@@ -26,6 +26,7 @@
     "embla-carousel": "^8.0.0-rc18",
     "embla-carousel-autoplay": "^8.0.0-rc19",
     "embla-carousel-react": "^8.0.0-rc18",
+    "flag-icons": "^7.5.0",
     "mongodb": "^6.3.0",
     "mui": "^0.0.1",
     "next": "14.0.3",
@@ -35,6 +36,7 @@
     "react-countup": "^6.5.3",
     "react-dom": "^18",
     "react-icons": "^4.12.0",
+    "react-intersection-observer": "^10.1.0",
     "react-responsive-carousel": "^3.2.23",
     "styled-components": "^6.1.3"
   },

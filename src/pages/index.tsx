@@ -6,6 +6,7 @@ import ProductImageCarousel from "@/components/home/productImageCarousel";
 import SectionTab from "@/components/home/sectionTabs";
 import Head from "next/head";
 import ProductsSection from '@/components/home/productSection';
+import GlobalPresence from "@/components/home/globalpresence";
 
 
 export default function Home() {
@@ -19,7 +20,7 @@ export default function Home() {
       <Homecarousel />
       <AboutUs />
       <GroupSection /> 
-      {/* Global Clients  */}
+      <GlobalPresence />
       <ProductImageCarousel /> 
       <SectionTab />
       <ProductsSection />

@@ -1,0 +1,442 @@
+/* ============================
+   GLOBAL PRESENCE
+============================ */
+
+.section{
+    padding:100px 20px;
+    background:#f7f9fb;
+}
+
+.container{
+    max-width:1320px;
+    margin:auto;
+}
+
+/* ============================
+   HEADING
+============================ */
+
+.heading{
+    text-align:center;
+    max-width:900px;
+    margin:0 auto 80px;
+}
+
+.heading span{
+    display:inline-block;
+    color:#b90f00;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:18px;
+}
+
+.heading h2{
+    margin:0;
+    font-size:clamp(38px,5vw,58px);
+    font-weight:850;
+    color:#111827;
+    line-height:1.1;
+}
+
+.heading p{
+    margin:24px auto 0;
+    max-width:760px;
+    font-size:17px;
+    line-height:1.9;
+    color:#5f6873;
+}
+
+/* ============================
+   GRID
+============================ */
+
+.grid{
+    display:grid;
+    grid-template-columns:1.05fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+/* ============================
+   IMAGE
+============================ */
+
+.imageArea{
+    position:relative;
+    height:520px;
+    border-radius:24px;
+}
+
+.image{
+    object-fit:cover;
+    border-radius:24px;
+    box-shadow:0 30px 80px rgba(0,0,0,.12);
+}
+
+/* ============================
+   FLOATING CARD
+============================ */
+
+.floatingCard{
+
+    position:absolute;
+
+    right:-30px;
+
+    bottom:45px;
+
+    width:240px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:26px;
+
+    box-shadow:0 25px 70px rgba(0,0,0,.15);
+
+    border:1px solid #ececec;
+
+    animation:floatCard 4s ease-in-out infinite;
+
+}
+
+.floatingCard h3{
+
+    margin:0;
+
+    font-size:56px;
+
+    line-height:1;
+
+    color:#b90f00;
+
+    font-weight:850;
+
+}
+
+.floatingCard span{
+
+    display:block;
+
+    margin-top:10px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+.floatingCard p{
+
+    margin-top:14px;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    color:#666;
+
+}
+
+@keyframes floatCard{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+/* ============================
+   RIGHT SIDE
+============================ */
+
+.exportTitle{
+    margin-bottom:28px;
+    font-size:32px;
+    font-weight:800;
+    color:#111827;
+}
+
+/* ============================
+   COUNTRIES
+============================ */
+
+.countryGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:18px;
+
+}
+
+.countryCard{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:18px 20px;
+
+    border-radius:16px;
+
+    background:#fff;
+
+    border:1px solid #e8edf2;
+
+    transition:.35s;
+
+    box-shadow:0 10px 24px rgba(0,0,0,.04);
+
+}
+
+.countryCard:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#b90f00;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+}
+
+.flag{
+
+    font-size:28px;
+
+    border-radius:4px;
+
+    overflow:hidden;
+
+    flex-shrink:0;
+
+}
+
+.countryName{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#111827;
+
+}
+
+/* ============================
+   STATS
+============================ */
+
+.statsRow{
+
+    margin-top:90px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:26px;
+
+}
+
+.statCard{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:40px 25px;
+
+    text-align:center;
+
+    border:1px solid #e8edf2;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.05);
+
+    transition:.35s;
+
+}
+
+.statCard:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#b90f00;
+
+}
+
+.statCard span{
+
+    display:block;
+font-weight: 850;
+    margin-top:16px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#b90f00;
+
+    line-height:1.5;
+
+}
+
+.counter{
+    font-size:62px !important;
+    font-weight:850;
+    color:#b90f00;
+    line-height:1;
+}
+
+.counter span{
+    font-size:inherit !important;
+}
+
+/* ============================
+   TABLET
+============================ */
+
+@media(max-width:992px){
+
+.section{
+
+padding:80px 20px;
+
+}
+
+.grid{
+
+grid-template-columns:1fr;
+
+gap:50px;
+
+}
+
+.imageArea{
+
+height:420px;
+
+}
+
+.floatingCard{
+
+right:20px;
+
+bottom:-20px;
+
+}
+
+.countryGrid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.statsRow{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* ============================
+   MOBILE
+============================ */
+
+@media(max-width:768px){
+
+.heading{
+
+margin-bottom:50px;
+
+}
+
+.heading h2{
+
+font-size:34px;
+
+}
+
+.heading p{
+
+font-size:16px;
+
+}
+
+.imageArea{
+
+height:300px;
+
+}
+
+.floatingCard{
+
+position:relative;
+
+right:auto;
+
+bottom:auto;
+
+margin:20px auto 0;
+
+width:100%;
+
+animation:none;
+
+}
+
+.countryGrid{
+
+grid-template-columns:1fr;
+
+}
+
+.countryCard{
+
+padding:16px;
+
+}
+
+.flag{
+
+font-size:24px;
+
+}
+
+.statsRow{
+
+grid-template-columns:1fr;
+
+gap:18px;
+
+}
+
+.statCard{
+
+padding:32px 20px;
+
+}
+
+
+.statCard span{
+
+font-size:15px;
+
+}
+
+}
