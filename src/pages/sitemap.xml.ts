@@ -1,67 +1,67 @@
 import { GetServerSideProps } from "next";
 
-
-const Sitemap = () => {
-  return null;
-};
-
+const Sitemap = () => null;
 
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
 
   const baseUrl = "https://inductionfurnaceconsumables.com";
 
-
   const pages = [
-    "",
-    "/about",
-    "/products",
-    "/contact",
+    {
+      url: "",
+      priority: "1.0",
+      changefreq: "weekly",
+    },
+    {
+      url: "/aboutus",
+      priority: "0.8",
+      changefreq: "monthly",
+    },
+    {
+      url: "/products",
+      priority: "0.9",
+      changefreq: "weekly",
+    },
+    {
+      url: "/contactus",
+      priority: "0.7",
+      changefreq: "yearly",
+    },
+    {
+      url: "/faq",
+      priority: "0.6",
+      changefreq: "monthly",
+    },
   ];
 
-
   const urls = pages
-    .map((page) => {
-      return `
+    .map(
+      (page) => `
       <url>
-        <loc>${baseUrl}${page}</loc>
+        <loc>${baseUrl}${page.url}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <changefreq>${page.changefreq}</changefreq>
+        <priority>${page.priority}</priority>
       </url>
-      `;
-    })
+    `
+    )
     .join("");
-
-
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 
-  <urlset 
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  ${urls}
+${urls}
 
-  </urlset>`;
+</urlset>`;
 
-
-
-  res.setHeader(
-    "Content-Type",
-    "text/xml"
-  );
-
-
+  res.setHeader("Content-Type", "text/xml");
   res.write(sitemap);
-
   res.end();
 
-
-
   return {
-    props:{}
+    props: {},
   };
-
 };
-
 
 export default Sitemap;

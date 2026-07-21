@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://fieldman-group-of-comapnies.vercel.app
+Host: https://inductionfurnaceconsumables.com
 
 # Sitemaps
-Sitemap: https://fieldman-group-of-comapnies.vercel.app/sitemap.xml
+Sitemap: https://inductionfurnaceconsumables.com/sitemap.xml

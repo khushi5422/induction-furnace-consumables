@@ -6,6 +6,7 @@ import { productOrganizations } from "@/data/productsData";
 
 const Navigationbar = () => {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const closeProductsMenu = () => {
     setIsProductsOpen(false);
@@ -39,20 +40,23 @@ const Navigationbar = () => {
 
         <button
           className={Home.mobileToggle}
-          onClick={() => setIsProductsOpen(!isProductsOpen)}
+          onClick={() => setIsMobileMenuOpen(prev => !prev)}
         >
           ☰
         </button>
 
         {/* NAVIGATION */}
 
-        <nav className={Home.centerNav}>
+        <nav
+          className={`${Home.centerNav} ${isMobileMenuOpen ? Home.mobileNavOpen : ""
+            }`}
+        >
 
-          <Link href="/" className={Home.navLink}>
+          <Link href="/" className={Home.navLink} onClick={() => setIsMobileMenuOpen(false)}>
             Home
           </Link>
 
-          <Link href="/aboutus" className={Home.navLink}>
+          <Link href="/aboutus" className={Home.navLink}onClick={() => setIsMobileMenuOpen(false)}>
             About
           </Link>
 
@@ -66,6 +70,7 @@ const Navigationbar = () => {
                 setIsProductsOpen(false);
               }, 150);
             }}
+            
           >
 
             <button className={Home.dropdownButton}>
@@ -132,9 +137,9 @@ const Navigationbar = () => {
                           >
 
                             <div
-                            //  href={`/products/${group.slug}`}
+                              //  href={`/products/${group.slug}`}
                               className={Home.productMainLink}
-                              // onClick={closeProductsMenu}
+                            // onClick={closeProductsMenu}
                             >
                               {group.title}
                             </div>
@@ -185,17 +190,18 @@ const Navigationbar = () => {
 
           </div>
 
-          <Link href="/contactus" className={Home.navLink}>
+          <Link href="/contactus" className={Home.navLink} onClick={() => setIsMobileMenuOpen(false)}>
             Contact
           </Link>
 
-          <Link href="/faq" className={Home.navLink}>
+          <Link href="/faq" className={Home.navLink} onClick={() => setIsMobileMenuOpen(false)}>
             FAQ
           </Link>
 
           <Link
             href="/contactus"
             className={Home.quoteButton}
+            onClick={() => setIsMobileMenuOpen(false)}
           >
             Get Quote
           </Link>

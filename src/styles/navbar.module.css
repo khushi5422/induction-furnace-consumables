@@ -83,6 +83,9 @@
 
   margin-left: auto;
 }
+.mobileNavOpen {
+  display: flex;
+}
 
 .navLink {
   color: #111827 !important;
@@ -377,23 +380,16 @@
   }
 
   .centerNav {
-    position: absolute;
-
-    top: 76px;
-
-    left: 0;
-
-    width: 100%;
-
-    background: white;
-
-    flex-direction: column;
-
-    align-items: stretch;
-
-    padding: 20px;
-
-    border-top: 1px solid #edf1f5;
+    display: none !important;
+  position: absolute;
+  top: 76px;
+  left: 0;
+  width: 100%;
+  background: white;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 20px;
+  border-top: 1px solid #edf1f5;
   }
 
   .quoteButton {
