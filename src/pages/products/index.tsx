@@ -5,6 +5,35 @@ import Image from "next/image";
 import { productOrganizations } from "@/data/productsData";
 
 import styles from "@/styles/products/ProductsPage.module.css";
+import SEO from "@/components/SEO/SEO";
+import Schema from "@/components/SEO/Schema";
+
+const productsSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Induction Furnace Consumables",
+  "url": "https://inductionfurnaceconsumables.com/products",
+  "description": "Explore induction furnace consumables including graphite crucibles, refractory materials and foundry products."
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://inductionfurnaceconsumables.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Products",
+      "item": "https://inductionfurnaceconsumables.com/products"
+    }
+  ]
+};
 
 export default function ProductsPage() {
 
@@ -31,20 +60,13 @@ export default function ProductsPage() {
   return (
 
     <>
-
-      <Head>
-
-        <title>
-          Industrial Products | Fieldman Group
-        </title>
-
-        <meta
-          name="description"
-          content="Explore industrial products from Fieldman Induction, Fieldman Control System and Fieldman Sensors."
-        />
-
-      </Head>
-
+      <SEO
+        title="Induction Furnace Consumables Products | Fieldman Induction"
+        description="Explore our complete range of induction furnace consumables including silica ramming mass, coil grout, insulation bricks, furnace accessories and more."
+        canonical="https://inductionfurnaceconsumables.com/products"
+      />
+      <Schema data={productsSchema} />
+      <Schema data={breadcrumbSchema} />
       {/* HERO */}
 
       <section className={styles.hero}>
@@ -170,11 +192,11 @@ export default function ProductsPage() {
               <div className={styles.productImageWrap}>
 
                 <Image
-    src={product.image}
-    alt={product.name}
-    fill
-    className={styles.productImage}
-  />
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className={styles.productImage}
+                />
 
               </div>
 

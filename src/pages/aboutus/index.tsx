@@ -8,23 +8,46 @@ import VisionMission from '@/components/about/VisionMission';
 import WhyChooseUs from '@/components/about/WhyChooseUs';
 import Leadership from '@/components/about/Leadership';
 import CTASection from '@/components/about/CTASection';
+import SEO from '@/components/SEO/SEO';
+import Schema from "@/components/SEO/Schema";
 
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Fieldman Induction",
+  "url": "https://inductionfurnaceconsumables.com/about",
+  "description": "Learn about Fieldman Induction, a trusted manufacturer of induction furnace consumables serving steel and foundry industries."
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://inductionfurnaceconsumables.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About Us",
+      "item": "https://inductionfurnaceconsumables.com/about"
+    }
+  ]
+};
 export default function AboutUs() {
   return (
     <>
-      <Head>
-        <title>
-          About Us | Fieldman Group Of Industries
-        </title>
-
-        <meta
-          name="description"
-          content="Fieldman Group Of Industries is a trusted manufacturer, supplier and exporter of induction furnace systems, industrial automation products and engineering solutions."
-        />
-      </Head>
-
+      <SEO
+        title="About Fieldman Induction | Leading Induction Furnace Consumables Manufacturer"
+        description="Learn about Fieldman Induction, our expertise, manufacturing process, quality standards and commitment to the steel industry."
+        canonical="https://inductionfurnaceconsumables.com/aboutus"
+      />
+      <Schema data={aboutSchema} />
+      <Schema data={breadcrumbSchema} />
       <main>
-
         <AboutHero />
 
         <CompanyStory />
@@ -39,7 +62,7 @@ export default function AboutUs() {
 
         <Leadership />
 
-        <CTASection /> 
+        <CTASection />
 
       </main>
     </>

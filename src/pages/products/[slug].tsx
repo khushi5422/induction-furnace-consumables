@@ -8,6 +8,7 @@ import { productOrganizations } from '@/data/productsData';
 import RelatedProducts from '@/components/products/RelatedProducts';
 
 import styles from '@/styles/products/ProductDetailsPage.module.css';
+import Schema from "@/components/SEO/Schema";
 
 export default function ProductDetailsPage() {
 
@@ -30,6 +31,53 @@ export default function ProductDetailsPage() {
     return null;
   }
 
+  const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": product.name,
+  "image": product.image,
+  "description": product.shortDescription,
+  "brand": {
+    "@type": "Brand",
+    "name": "Fieldman Induction"
+  },
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "Fieldman Induction"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": `https://inductionfurnaceconsumables.com/products/${product.slug}`,
+    "priceCurrency": "INR",
+    "availability": "https://schema.org/InStock"
+  }
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://inductionfurnaceconsumables.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Products",
+      "item": "https://inductionfurnaceconsumables.com/products"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": product.name,
+      "item": `https://inductionfurnaceconsumables.com/products/${product.slug}`
+    }
+  ]
+};
+
   return (
     <>
       <Head>
@@ -42,6 +90,8 @@ export default function ProductDetailsPage() {
           content={product.shortDescription}
         /> */}
       </Head>
+      <Schema data={productSchema} />
+      <Schema data={breadcrumbSchema} />
 
       <section className={styles.hero}>
 
