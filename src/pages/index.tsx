@@ -8,6 +8,7 @@ import SEO from '@/components/SEO/SEO';
 import ProductsSection from '@/components/home/productSection';
 import GlobalPresence from "@/components/home/globalpresence";
 import Schema from "@/components/SEO/Schema";
+import SEOHead from "@/components/SEO/SEOHead";
 
 
 const homeSchema = {
@@ -52,6 +53,11 @@ export default function Home() {
       />
       <Schema data={homeSchema} />
       <Schema data={breadcrumbSchema} />
+      <SEOHead
+        title="Induction Furnace Consumables Manufacturer | Fieldman Induction"
+        description="Manufacturer of induction furnace consumables including graphite crucibles, refractory materials and foundry products."
+        url="https://inductionfurnaceconsumables.com"
+      />
       <Homecarousel />
       <AboutUs />
       <GroupSection />

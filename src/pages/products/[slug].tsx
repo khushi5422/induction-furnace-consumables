@@ -9,7 +9,49 @@ import RelatedProducts from '@/components/products/RelatedProducts';
 
 import styles from '@/styles/products/ProductDetailsPage.module.css';
 import Schema from "@/components/SEO/Schema";
+import SEOHead from '@/components/SEO/SEOHead';
 
+export async function getStaticPaths() {
+
+  const allProducts = productOrganizations.flatMap(
+    (organization) =>
+      organization.groups.flatMap(
+        (group) => group.products
+      )
+  );
+
+  const paths = allProducts.map((product) => ({
+    params: {
+      slug: product.slug,
+    },
+  }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+
+export async function getStaticProps({ params }: any) {
+
+  const allProducts = productOrganizations.flatMap(
+    (organization) =>
+      organization.groups.flatMap(
+        (group) => group.products
+      )
+  );
+
+  const product = allProducts.find(
+    (item) => item.slug === params.slug
+  );
+
+  return {
+    props: {
+      product,
+    },
+  };
+}
 export default function ProductDetailsPage() {
 
   const router = useRouter();
@@ -32,51 +74,51 @@ export default function ProductDetailsPage() {
   }
 
   const productSchema = {
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": product.name,
-  "image": product.image,
-  "description": product.shortDescription,
-  "brand": {
-    "@type": "Brand",
-    "name": "Fieldman Induction"
-  },
-  "manufacturer": {
-    "@type": "Organization",
-    "name": "Fieldman Induction"
-  },
-  "offers": {
-    "@type": "Offer",
-    "url": `https://inductionfurnaceconsumables.com/products/${product.slug}`,
-    "priceCurrency": "INR",
-    "availability": "https://schema.org/InStock"
-  }
-};
-
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://inductionfurnaceconsumables.com"
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": product.name,
+    "image": product.image,
+    "description": product.shortDescription,
+    "brand": {
+      "@type": "Brand",
+      "name": "Fieldman Induction"
     },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Products",
-      "item": "https://inductionfurnaceconsumables.com/products"
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Fieldman Induction"
     },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": product.name,
-      "item": `https://inductionfurnaceconsumables.com/products/${product.slug}`
+    "offers": {
+      "@type": "Offer",
+      "url": `https://inductionfurnaceconsumables.com/products/${product.slug}`,
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
     }
-  ]
-};
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://inductionfurnaceconsumables.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Products",
+        "item": "https://inductionfurnaceconsumables.com/products"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": product.name,
+        "item": `https://inductionfurnaceconsumables.com/products/${product.slug}`
+      }
+    ]
+  };
 
   return (
     <>
@@ -92,6 +134,16 @@ const breadcrumbSchema = {
       </Head>
       <Schema data={productSchema} />
       <Schema data={breadcrumbSchema} />
+      <SEOHead
+        title={`${product.name} | Fieldman Induction`}
+        description={
+          Array.isArray(product.shortDescription)
+            ? product.shortDescription.join(", ")
+            : product.shortDescription
+        }
+        url={`https://inductionfurnaceconsumables.com/products/${product.slug}`}
+        image={product.image}
+      />
 
       <section className={styles.hero}>
 

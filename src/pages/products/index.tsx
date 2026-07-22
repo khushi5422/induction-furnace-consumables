@@ -7,6 +7,7 @@ import { productOrganizations } from "@/data/productsData";
 import styles from "@/styles/products/ProductsPage.module.css";
 import SEO from "@/components/SEO/SEO";
 import Schema from "@/components/SEO/Schema";
+import SEOHead from "@/components/SEO/SEOHead";
 
 const productsSchema = {
   "@context": "https://schema.org",
