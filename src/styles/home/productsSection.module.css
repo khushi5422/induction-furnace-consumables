@@ -344,25 +344,64 @@
 /* RESPONSIVE */
 
 @media (max-width: 992px) {
-  .productsSection {
-    flex-direction: column;
-
-    padding: 50px 20px;
+  .productsSection{
+    flex-direction:column;
+    gap:15px;
   }
 
-  .leftPanel {
-    width: 100%;
 
-    flex-direction: row;
-
-    overflow-x: auto;
-
-    padding-bottom: 10px;
+  /* Keep 3 tabs in one row */
+  .leftPanel{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+    width:100%;
   }
 
-  .categoryBtn {
-    min-width: max-content;
+
+  .categoryBtn{
+    width:100%;
+    padding:8px 5px;
+    min-height:45px;
+    border-radius:12px;
   }
+
+
+  .categoryBtn h4{
+    font-size:12px;
+    line-height:1.2;
+    margin:0;
+  }
+
+
+  /* Product cards smaller */
+  .productsGrid{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+  }
+
+
+  .imageWrapper{
+    height:110px;
+  }
+
+
+  .cardContent{
+    padding:8px;
+  }
+
+
+  .cardContent h3{
+    font-size:13px;
+    line-height:1.25;
+  }
+
+
+  /* Remove extra spacing */
+  .rightPanel{
+    width:100%;
+  }
+
 }
 
 @media (max-width: 600px) {

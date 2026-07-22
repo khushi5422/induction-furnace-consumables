@@ -83,8 +83,8 @@ export default function GlobalPresence() {
               </span>
 
               <p>
-                Delivering precision engineered industrial products
-                worldwide with trusted quality and reliability.
+                Delivering precision-engineered induction furnace consumables, furnace components and industrial solutions to 
+                customers worldwide through a growing network of trusted industrial partners.
               </p>
             </div>
           </div>

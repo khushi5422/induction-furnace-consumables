@@ -8,20 +8,20 @@ const Homecarousel = () => {
   const images = [
     {
       src: "Banner 4.jpg",
-      heading: "Manufacturer of Induction Furnace Spares & Exporter ",
+      heading: "Induction Furnace Consumables Manufacturer for Steel & Foundry Industries ",
       description:
-        "A complete product range across Fieldman Induction, Fieldman Sensors and Fieldman Control System.",
+        "Fieldman Induction manufactures high-quality induction furnace consumables, furnace spares and industrial solutions for steel plants, foundries and metal processing industries.",
     }
     ,
     {
       src: "Banner 1.jpg",
-      heading: "Induction Melting Furnace & Coil Manufacturer",
+      heading: "Reliable Induction Furnace Spares Manufacturer & Supplier",
       description:
         "Precision-built furnace coils, assemblies and industrial spares for demanding steel and foundry applications.",
     },
     {
       src: "Banner 2.jpg",
-      heading: "Induction Furnace Assembly Manufacturer",
+      heading: "Induction Furnace Coil & Assembly Manufacturer",
       description:
         "Reliable furnace assemblies engineered for efficient melting, heating and long-term plant performance.",
     },
@@ -69,10 +69,10 @@ const Homecarousel = () => {
             <p>{image.description}</p>
             <div className={Home.heroActions}>
               <Link href="/products" className={Home.heroPrimaryBtn}>
-                View Products
+                Explore Furnace Consumables
               </Link>
               <Link href="/contactus" className={Home.heroSecondaryBtn}>
-                Contact Us
+                Request Industrial Quote
               </Link>
             </div>
           </div>

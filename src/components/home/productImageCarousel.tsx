@@ -29,13 +29,12 @@ export default function ProductImageCarousel() {
         </span>
 
         <h2>
-          Steel Industry Machinary & Spares Manufacturer
+          Steel Industry Machinery, Induction Furnace Consumables & Spares Manufacturer
         </h2>
 
         <p>
-          Precision-engineered products trusted by
-          industries across manufacturing, steel and
-          industrial automation sectors.
+          Precision-engineered induction furnace consumables, machinery and industrial spare parts 
+          Trusted by steel plants, foundries, manufacturing and industrial automation sectors for reliable performance and long service life.
         </p>
 
       </div>
