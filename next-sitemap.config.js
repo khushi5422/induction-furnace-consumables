@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 
 module.exports = {
-  siteUrl: 'https://fieldman-group-of-comapnies.vercel.app',
+  siteUrl: 'https://inductionfurnaceconsumables.com',
 
   generateRobotsTxt: true,
 
