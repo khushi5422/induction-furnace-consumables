@@ -489,7 +489,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 480px;
+    display: none;
   }
 
   .heroContent h1 {

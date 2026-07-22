@@ -36,9 +36,8 @@
   background: rgba(17, 24, 39, 0.45);
   backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow:
-    0 10px 40px rgba(0, 0, 0, 0.18);
-    overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
 }
 
 /* Tab Styling */
@@ -56,13 +55,13 @@
 
   color: #ffffff !important;
 
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 
   transition: all 0.3s ease !important;
 }
 
 .customTab:hover {
- background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.08);
   color: white !important;
 }
 
@@ -73,8 +72,7 @@
 
   color: #ffffff !important;
 
-  box-shadow:
-    0 8px 20px rgba(255, 20, 0, 0.35);
+  box-shadow: 0 8px 20px rgba(255, 20, 0, 0.35);
 }
 
 /* Content */
@@ -103,7 +101,7 @@
 
   font-weight: 700;
 
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 
   max-width: 680px;
 
@@ -127,7 +125,7 @@
 
   font-weight: 600;
 
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 
   transition: 0.3s ease;
 }
@@ -177,5 +175,44 @@
   .customTab {
     font-size: 11px !important;
     min-height: 60px !important;
+  }
+}
+@media (max-width: 768px) {
+  .tabsContainer {
+    width: 100%;
+    overflow-x: auto;
+    padding: 10px 15px;
+  }
+
+  .tabsContainer :global(.MuiTabs-root) {
+    min-height: unset;
+  }
+
+  .tabsContainer :global(.MuiTabs-flexContainer) {
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+
+  .tabsContainer :global(.MuiTab-root) {
+    flex: 0 0 auto;
+    min-width: auto;
+    min-height: auto;
+    white-space: nowrap;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+  }
+
+  .tabsContainer :global(.MuiTabs-scroller) {
+    overflow-x: auto !important;
+  }
+
+  .tabsContainer :global(.MuiTabs-scrollButtons) {
+    display: none;
+  }
+
+  .customTab {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
   }
 }

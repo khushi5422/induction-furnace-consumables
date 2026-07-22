@@ -2,30 +2,6 @@ import React from 'react';
 import Image from "next/image";
 import Home from '@/styles/home/aboutus.module.css'
 
-// const groupCompanies = [
-//   {
-//     label: "AUTOMATION & CONTROLS",
-//     title: "Fieldman Control System",
-//     image: "/fieldman-control-system.png",
-//     text:
-//       "A trusted division for industrial automation, factory automation, testing instruments, sensors and control products used across modern plant operations.",
-//   },
-//   {
-//     label: "SENSORS & MEASUREMENT",
-//     title: "Fieldman Sensors Pvt. Ltd.",
-//     image: "/fieldman-sensor.png",
-//     text:
-//       "An Indian manufacturer of standard and precision temperature measurement sensors serving steel, glass, petrochemical, power and furnace industries.",
-//   },
-//   {
-//     label: "FURNACE SOLUTIONS",
-//     title: "Fieldman Induction",
-//     image: "/fieldman-induction.png",
-//     text:
-//       "Focused on induction furnace systems, selector switches, spares and allied products tested through a dedicated quality control process.",
-//   },
-// ];
-
 const AboutUs = () => {
   return (
 
@@ -63,7 +39,7 @@ const AboutUs = () => {
           <div className={Home.aboutContent}>
 
             <span className={Home.aboutTag}>
-              ABOUT COMPANY
+              About Fieldman Induction - Induction Furnace Consumables Manufacturer
             </span>
 
             <h2 className={Home.aboutTitle}>
@@ -72,15 +48,13 @@ const AboutUs = () => {
 
             <p className={Home.aboutText}>
 
-              Your trusted partner for end-to-end industrial solutions built for the steel industry
-              <b> Fieldman Induction </b>
-              Fieldman Induction which was formed in the year 2005
+              <b>Fieldman Induction</b>is a trusted manufacturer, supplier and exporter of high-quality induction furnace consumables and industrial solutions 
+              for the steel and metal processing industries. Established in 2005, we have built strong expertise in delivering reliable, durable and 
+              performance-driven solutions designed to meet the evolving needs of modern industries.
 
               <br /><br />
 
-              We are a proud manufacturer, supplier and exporter of
-              products like
-
+              We specialize in manufacturing and supplying products such as
               <b>
                 {' '}Induction Furnace Coil,
                 Furnace Assembly,
@@ -89,13 +63,13 @@ const AboutUs = () => {
                 Heating Furnace Spares
               </b>
 
-              and many more.
+              and other essential furnace components. Our products are engineered with precision to deliver efficiency, reliability and long service life in demanding industrial environments.
 
               <br /><br />
 
-              Our products are widely used in
-              steel, petrochemical, glass,
-              aerospace and plastic industries.
+              Our solutions are widely used across steel plants, foundries, petrochemical, glass, aerospace and plastic industries.
+              With a commitment to quality, innovation and customer satisfaction, Fieldman Induction continues to serve as a dependable 
+              partner for industrial furnace solutions in India and global markets.
 
             </p>
 
