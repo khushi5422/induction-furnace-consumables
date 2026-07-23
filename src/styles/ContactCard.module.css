@@ -225,11 +225,6 @@
 }
 
 @media (max-width: 768px) {
-  .directorySection {
-    margin-top: -50px;
-
-    padding: 0 18px 70px;
-  }
 
   .contactCard {
     min-height: auto;
