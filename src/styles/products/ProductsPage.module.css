@@ -514,3 +514,316 @@
     font-size: 24px;
   }
 }
+
+/* ===========================
+   Desktop / Mobile Switch
+=========================== */
+
+.desktopOnly{
+  display:block;
+}
+
+.mobileOnly{
+  display:none;
+}
+
+@media(max-width:768px){
+
+  .desktopOnly{
+    display:none;
+  }
+
+  .mobileOnly{
+    display:block;
+  }
+
+}
+
+/* =====================================================
+   MOBILE PRODUCTS
+=====================================================*/
+
+.mobileProducts{
+    padding:16px;
+    background:#f8fafc;
+    min-height:100vh;
+}
+
+/* ---------- Search ---------- */
+
+.mobileSearch{
+    position:relative;
+    width:100%;
+    margin-bottom:14px;
+}
+
+
+.mobileSearch input{
+
+    width:100%;
+    height:48px;
+
+    padding:0 45px 0 18px;
+
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+
+    background:#fff;
+
+    font-size:15px;
+
+    outline:none;
+
+}
+
+.mobileFilters{
+
+    position:sticky;
+
+    top:18px;
+
+    z-index:20;
+
+    background:#f8fafc;
+
+    padding-top:5px;
+
+    padding-bottom:16px;
+
+}
+.mobileFilters::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:1px;
+
+    background:#e5e7eb;
+
+}
+
+.clearSearch{
+
+    position:absolute;
+
+    right:12px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:24px;
+    height:24px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:0;
+
+    border:none;
+
+    background:transparent;
+
+    color:#64748b;
+
+    font-size:22px;
+
+    line-height:1;
+
+    cursor:pointer;
+
+}
+
+.mobileSearch input:focus{
+    border-color:#b90f00;
+}
+
+
+/* ---------- Organization Tabs ---------- */
+
+.mobileOrganizations{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:8px;
+
+    margin-bottom:14px;
+}
+
+.mobileOrganization,
+.mobileOrganizationActive{
+
+    height:46px;
+
+    border-radius:12px;
+
+    font-size:13px;
+    font-weight:700;
+
+    transition:.25s;
+}
+
+.mobileOrganization{
+
+    background:#fff;
+
+    border:1px solid #e5e7eb;
+
+    color:#0f172a;
+}
+
+.mobileOrganizationActive{
+
+    border:none;
+
+    color:#fff;
+
+    background:#b90f00;
+}
+
+
+/* ---------- Category Tabs ---------- */
+
+.mobileCategories{
+
+    display:flex;
+
+    gap:8px;
+
+    overflow-x:auto;
+
+    padding-bottom:10px;
+
+    margin-bottom:18px;
+
+    scrollbar-width:none;
+}
+
+.mobileCategories::-webkit-scrollbar{
+    display:none;
+}
+
+.mobileCategory,
+.mobileCategoryActive{
+
+    flex-shrink:0;
+
+    padding:10px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+    font-weight:600;
+}
+
+.mobileCategory{
+
+    background:#fff;
+
+    border:1px solid #e5e7eb;
+}
+
+.mobileCategoryActive{
+
+    border:none;
+
+    color:#fff;
+
+    background:#b90f00;
+}
+
+
+/* ---------- Product Grid ---------- */
+
+.mobileGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
+
+    padding-top:10px;
+
+}
+
+
+/* ---------- Product Card ---------- */
+
+.mobileCard{
+
+    display:block;
+
+    overflow:hidden;
+
+    border-radius:14px;
+
+    background:#fff;
+
+    text-decoration:none;
+
+    box-shadow:0 4px 14px rgba(0,0,0,.06);
+}
+
+.mobileImage{
+
+    position:relative;
+
+    height:130px;
+
+    background:#fff;
+}
+
+.mobileProductImage{
+
+    object-fit:contain;
+
+    padding:10px;
+}
+
+.mobileCard h3{
+
+    margin:12px;
+
+    color:#111827;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    line-height:1.35;
+
+    min-height:38px;
+}
+
+.mobileCard span{
+
+    display:block;
+
+    margin:0 12px 12px;
+
+    color:#b90f00;
+
+    font-size:13px;
+
+    font-weight:700;
+}
+
+.noProducts{
+    grid-column:1/-1;
+
+    padding:40px 20px;
+
+    text-align:center;
+
+    color:#64748b;
+
+    font-size:15px;
+
+    font-weight:500;
+}

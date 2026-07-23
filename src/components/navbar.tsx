@@ -56,28 +56,33 @@ const Navigationbar = () => {
             Home
           </Link>
 
-          <Link href="/aboutus" className={Home.navLink}onClick={() => setIsMobileMenuOpen(false)}>
+          <Link href="/aboutus" className={Home.navLink} onClick={() => setIsMobileMenuOpen(false)}>
             About
           </Link>
 
           {/* PRODUCTS */}
 
-          <div
-            className={Home.dropdownWrapper}
-            onMouseEnter={() => setIsProductsOpen(true)}
-            onMouseLeave={() => {
-              setTimeout(() => {
-                setIsProductsOpen(false);
-              }, 150);
-            }}
-            
-          >
+          <div className={Home.dropdownWrapper}>
 
-            <button className={Home.dropdownButton}>
-              Products
-            </button>
+  {/* DESKTOP ONLY */}
 
-            {isProductsOpen && (
+  <div className={Home.desktopProducts}>
+
+    <div
+      onMouseEnter={() => setIsProductsOpen(true)}
+      onMouseLeave={() => {
+        setTimeout(() => {
+          setIsProductsOpen(false);
+        }, 150);
+      }}
+    >
+
+      <button className={Home.dropdownButton}>
+        Products
+      </button>
+
+
+      {isProductsOpen && (
 
               <div className={Home.dropdownMenu}>
 
@@ -188,7 +193,24 @@ const Navigationbar = () => {
 
             )}
 
-          </div>
+    </div>
+
+  </div>
+
+
+  {/* MOBILE ONLY */}
+
+  <Link
+    href="/products"
+    className={`${Home.navLink} ${Home.mobileProducts}`}
+    onClick={() => setIsMobileMenuOpen(false)}
+  >
+    Products
+  </Link>
+
+
+</div>
+
 
           <Link href="/contactus" className={Home.navLink} onClick={() => setIsMobileMenuOpen(false)}>
             Contact

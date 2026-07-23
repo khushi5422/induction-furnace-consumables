@@ -84,7 +84,7 @@
   margin-left: auto;
 }
 .mobileNavOpen {
-  display: flex;
+  display: flex !important;
 }
 
 .navLink {
@@ -347,18 +347,32 @@
   box-shadow: none !important;
 }
 
+.mobileProducts {
+  display: none !important;
+}
+
+.desktopProducts {
+  display: block;
+}
+
 @media (max-width: 991px) {
+  .desktopProducts {
+    display: none !important;
+  }
+
+  .mobileProducts {
+    display: block !important;
+  }
+
   .navContainer {
     padding: 0 20px;
   }
 
   .navlogoWrap {
+    width: 350px;
 
-  width: 350px;
-
-  height: 50px;
-
-}
+    height: 50px;
+  }
 
   .mobileToggle {
     display: flex;
@@ -388,16 +402,25 @@
   }
 
   .centerNav {
-    display: none !important;
-  position: absolute;
-  top: 76px;
-  left: 0;
-  width: 100%;
-  background: white;
-  flex-direction: column;
-  align-items: stretch;
-  padding: 20px;
-  border-top: 1px solid #edf1f5;
+    display: none;
+
+    position: absolute;
+
+    top: 76px;
+
+    left: 0;
+
+    width: 100%;
+
+    background: white;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding: 20px;
+
+    border-top: 1px solid #edf1f5;
   }
 
   .quoteButton {
